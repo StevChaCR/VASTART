@@ -1,30 +1,46 @@
 /* ============================================
    Man Yu Artist Page JavaScript
    Collections, Catalog, Lightbox functionality
-   All artworks from manyuart.com
    ============================================ */
 
 // ============================================
-// Collections Data - Real artworks from manyuart.com
+// Collections Data 
 // ============================================
 
 const collectionsData = {
     'human-suit': {
         title: 'Human Suit',
         description: 'The first work in the collection was made in 1987. Man Yu, immersed in this premature reflection, first materialized this dense and abstract concept when she was only 9 years old. However, it was not until 2013 when Man Yu felt the call to delve again into this recurring question and reveal it through her brush. The first human suit was painted as an impotent outlet, but the other works are the work of transforming this catharsis into poetry and communication.',
-        coverImage: 'assets/traje-01.png',
-        video: 'TrINOOcpJ50',
+        coverImage: 'assets/humansuit/El abrazo. 2018. Óleo.150x150cm.jpg',
         artworks: [
-            { image: 'assets/traje-01.png', title: "Man Yu contempo logo chino_edited_edited_edited.png", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-02.jpeg', title: "d78eda_a965fbe32d1b47ca9279975bd79a88f9~mv2.jpeg", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-03.jpg', title: "d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-04.png', title: "Facebook", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-05.png', title: "Instagram", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-06.png', title: "Youtube", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-07.png', title: "Twitter", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-08.png', title: "TikTok", details: "Available - Contact for pricing" },
-            { image: 'assets/traje-09.png', title: "LinkedIn", details: "Available - Contact for pricing" }
-
+            { image: 'assets/humansuit/Algunos ojos abiertos.jpg', title: "Algunos ojos abiertos", details: "Óleo" },
+            { image: 'assets/humansuit/Apego. 2018. Óleo. 116,0 x 81,5 cm.jpg', title: "Apego", details: "2018. Óleo. 116,0 x 81,5 cm" },
+            { image: 'assets/humansuit/Cambio de traje (también Una prenda nueva). 2013. Óleo. 235x145 cm.jpg', title: "Cambio de traje (Una prenda nueva)", details: "2013. Óleo. 235x145 cm" },
+            { image: 'assets/humansuit/Cuerpo solo hay uno (también Sentencia). 2013. Óleo. 238,5x147 cm.jpg', title: "Cuerpo solo hay uno (Sentencia)", details: "2013. Óleo. 238,5x147 cm" },
+            { image: 'assets/humansuit/Desnudammiento (también Enamoramiento). 2013. Óleo. 122x91 cm.jpg', title: "Desnudamiento (Enamoramiento)", details: "2013. Óleo. 122x91 cm" },
+            { image: 'assets/humansuit/El abrazo. 2018. Óleo.150x150cm.jpg', title: "El abrazo", details: "2018. Óleo. 150x150 cm" },
+            { image: 'assets/humansuit/El beso. 2018. Óleo. 122x91 cm.jpg', title: "El beso", details: "2018. Óleo. 122x91 cm" },
+            { image: 'assets/humansuit/El escape (también Materialización). 2018. Óleo. 130x80 cm.jpg', title: "El escape (Materialización)", details: "2018. Óleo. 130x80 cm" },
+            { image: 'assets/humansuit/El guante izquierdo. 2013. Óleo. 122x91 cm.jpg', title: "El guante izquierdo", details: "2013. Óleo. 122x91 cm" },
+            { image: 'assets/humansuit/El linaje. 2013. Óleo. 86,5x136 cm.jpg', title: "El linaje", details: "2013. Óleo. 86,5x136 cm" },
+            { image: 'assets/humansuit/El portal. 2018. Óleo. 86,5x136 cm.jpg', title: "El portal", details: "2018. Óleo. 86,5x136 cm" },
+            { image: 'assets/humansuit/Guante derecho. 2013. Óleo_edited.jpg', title: "Guante derecho", details: "2013. Óleo" },
+            { image: 'assets/humansuit/Jáquers (El plan perfecto). 2018. Óleo.150x150cm.jpg', title: "Jáquers (El plan perfecto)", details: "2018. Óleo. 150x150 cm" },
+            { image: 'assets/humansuit/La caída. 2018. Óleo 80x149,5.jpg', title: "La caída", details: "2018. Óleo. 80x149,5 cm" },
+            { image: 'assets/humansuit/La otra cara. 2013. Óleo. 62x75 cm.jpg', title: "La otra cara", details: "2013. Óleo. 62x75 cm" },
+            { image: 'assets/humansuit/Liberación. 2018. Óleo. 91x122 cm.jpg', title: "Liberación", details: "2018. Óleo. 91x122 cm" },
+            { image: 'assets/humansuit/Poder. 2018. Óleo_edited.jpg', title: "Poder", details: "2018. Óleo" },
+            { image: 'assets/humansuit/Préstamo 1 (también De shopping 2). 2013. Óleo. 90x120 cm.jpg', title: "Préstamo 1 (De shopping 2)", details: "2013. Óleo. 90x120 cm" },
+            { image: 'assets/humansuit/Préstamo 2 (De shopping 1). 2013. Óleo. 130x80.jpg', title: "Préstamo 2 (De shopping 1)", details: "2013. Óleo. 130x80 cm" },
+            { image: 'assets/humansuit/Prisionerx no identificadx (también La completa desconocida). 2013. Óleo. 80x120 cm.jpg', title: "Prisionerx no identificadx (La completa desconocida)", details: "2013. Óleo. 80x120 cm" },
+            { image: 'assets/humansuit/Promesa de ángeles (Protección). 2018. Óleo. 150x250.jpg', title: "Promesa de ángeles (Protección)", details: "2018. Óleo. 150x250 cm" },
+            { image: 'assets/humansuit/Prueba final (también El adiós). 2018. Óleo. 201x90 cm.jpg', title: "Prueba final (El adiós)", details: "2018. Óleo. 201x90 cm" },
+            { image: 'assets/humansuit/Re-nacer. 2019. Óleo. 150x150.jpg', title: "Re-nacer", details: "2019. Óleo. 150x150 cm" },
+            { image: 'assets/humansuit/Somnolencia. 2013. Óleo. 91x122 cm.jpg', title: "Somnolencia", details: "2013. Óleo. 91x122 cm" },
+            { image: 'assets/humansuit/Tercera opinión. 2013. Óleo_edited.jpg', title: "Tercera opinión", details: "2013. Óleo" },
+            { image: 'assets/humansuit/v El traje perfecto. 2013. Óleo. 141x85.jpg', title: "El traje perfecto", details: "2013. Óleo. 141x85 cm" },
+            { image: 'assets/humansuit/v Fisionomía. 2013. Óleo. 91x122 cm.jpg', title: "Fisionomía", details: "2013. Óleo. 91x122 cm" },
+            { image: 'assets/humansuit/WhatsApp Image 2024-10-03 at 03.11.47.jpeg', title: "Human Suit - Obra 28", details: "Óleo" }
         ]
     },
     'futuristic-art': {
@@ -175,6 +191,37 @@ const lightboxDetails = document.getElementById('lightboxDetails');
 
 let currentArtworks = [];
 let currentImageIndex = 0;
+
+// ============================================
+// Hero Video Sound Control
+// ============================================
+
+const heroVideo = document.getElementById('heroVideo');
+const videoSoundBtn = document.getElementById('videoSoundBtn');
+
+if (heroVideo && videoSoundBtn) {
+    const soundOff = videoSoundBtn.querySelector('.sound-off');
+    const soundOn = videoSoundBtn.querySelector('.sound-on');
+
+    videoSoundBtn.addEventListener('click', () => {
+        if (heroVideo.muted) {
+            heroVideo.muted = false;
+            soundOff.style.display = 'none';
+            soundOn.style.display = 'inline';
+        } else {
+            heroVideo.muted = true;
+            soundOff.style.display = 'inline';
+            soundOn.style.display = 'none';
+        }
+    });
+
+    // Try to play video if paused
+    heroVideo.addEventListener('click', () => {
+        if (heroVideo.paused) {
+            heroVideo.play();
+        }
+    });
+}
 
 // ============================================
 // Navbar Scroll Effect

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VASTART - Art Gallery</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,6 +23,18 @@
         </div>
     </nav>
 
+    <!-- Animated Background -->
+    <div class="particles-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -34,42 +47,59 @@
                 <span class="line"></span>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-content">
             <h2>Sobre Nosotros</h2>
-            <p>VASTART es una galería de arte que conecta artistas emergentes con amantes del arte. Celebramos la creatividad, la expresión y la conexión humana a través del arte.</p>
-            <p>Somos una plataforma de arte multidisciplinaria y comunidad creativa que reúne a artistas con trayectorias sólidas y miradas contemporáneas, junto a personas que desean explorar, aprender y crecer a través del arte.</p>
-            <p>Este es un espacio abierto para quienes deciden emprender el viaje de sus pasiones. Aquí el arte no se presenta como algo distante, sino como un camino que se comparte: a través de obras, experiencias, cursos y procesos guiados por artistas activos que abren su práctica y conocimiento a otros.</p>
-            <p>Creemos en el valor del encuentro, del aprendizaje colectivo y del intercambio genuino. Por eso, VASTART funciona como un ecosistema vivo, donde crear, aprender y conectar forman parte de una misma experiencia.</p>
-            <p>Más que una galería, somos una comunidad en movimiento, un lugar para empaparse del mundo del arte y avanzar acompañado de las figuras más consolidadas en la escena del arte contemporáneo y tradicional.</p>
+            <p>VASTART es una plataforma de arte multidisciplinaria y comunidad creativa que reúne a artistas con trayectorias sólidas junto a personas que desean explorar, aprender y crecer a través del arte.</p>
+            <p>Más que una galería, somos un ecosistema vivo donde crear, aprender y conectar forman parte de una misma experiencia, acompañados de figuras consolidadas en la escena del arte contemporáneo y tradicional.</p>
+        </div>
+    </section>
+
+    <div class="elegant-divider">
+        <span class="divider-line"></span>
+        <span class="divider-icon">◆</span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- Cause Section -->
+    <section class="about" id="causa">
+        <div class="about-content">
+            <h2>Nuestra Causa</h2>
+            <p>En VASTART creemos que el arte tiene el poder de transformar vidas. Por eso, parte de nuestra misión es devolver a la comunidad a través de eventos solidarios y acciones benéficas.</p>
+            <p>Organizamos cenas navideñas, entregamos regalos, alimentos, prendas y apoyamos a familias en situación vulnerable, porque el arte también es un puente hacia la solidaridad y el cambio social.</p>
         </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats">
+        <h2 class="section-title">Lo que hemos logrado a día de hoy..</h2>
         <div class="stats-container">
             <div class="stat-item">
-                <span class="stat-number" data-target="300">0</span>
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">EVENTOS SOLIDARIOS REALIZADOS</span>                 
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span>
                 <span class="stat-plus">+</span>
                 <span class="stat-label">INVITADOS</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" data-target="350">0</span>
+                <span class="stat-number" data-target="400">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">CENAS REALIZADAS</span>
+                <span class="stat-label">REGALOS ENTREGADOS</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number" data-target="200">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">REGALOS DADOS</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="6">0</span>
-                <span class="stat-plus">+</span>
-                <span class="stat-label">NAVIDADES SOLIDARIAS</span>
+                <span class="stat-label">FAMILIAS AYUDADAS</span>
             </div>
         </div>
     </section>
@@ -81,114 +111,88 @@
             <!-- Artist 1 - Man Yu -->
             <a href="manyu.html" class="artist-card" data-artist="manyu">
                 <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop" alt="Man Yu">
+                    <img src="assets/manyu1.1.png" alt="Man Yu">
                 </div>
                 <div class="artist-info">
                     <h3>Man Yu</h3>
-                    <p>Interdisciplinary Artist</p>
-                    <span class="artist-link">Ver portfolio →</span>
+                    <p>Artista Interdisciplinario.</p>
+                    <span class="artist-link">Ver servicios y portafolio →</span>
                 </div>
             </a>
 
             <!-- Artist 2 - Placeholder -->
             <div class="artist-card" data-artist="artist2">
                 <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Artist Name">
+                    <img src="assets/david1.1.png" alt="David Fung">
                 </div>
                 <div class="artist-info">
-                    <h3>Artist Name</h3>
-                    <p>Especialidad artística</p>
-                    <a href="#" class="artist-link">Ver portfolio →</a>
+                    <h3>David Fung</h3>
+                    <p>Modelo, músico.</p>
+                    <a href="#" class="artist-link">Ver servicios y portafolio →</a>
                 </div>
             </div>
 
-            <!-- Artist 3 - Placeholder -->
-            <div class="artist-card" data-artist="artist3">
-                <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Artist Name">
-                </div>
-                <div class="artist-info">
-                    <h3>Artist Name</h3>
-                    <p>Especialidad artística</p>
-                    <a href="#" class="artist-link">Ver portfolio →</a>
-                </div>
-            </div>
-
-            <!-- Artist 4 - Placeholder -->
-            <div class="artist-card" data-artist="artist4">
-                <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Artist Name">
-                </div>
-                <div class="artist-info">
-                    <h3>Artist Name</h3>
-                    <p>Especialidad artística</p>
-                    <a href="#" class="artist-link">Ver portfolio →</a>
-                </div>
-            </div>
-
-            <!-- Artist 5 - Placeholder -->
-            <div class="artist-card" data-artist="artist5">
-                <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Artist Name">
-                </div>
-                <div class="artist-info">
-                    <h3>Artist Name</h3>
-                    <p>Especialidad artística</p>
-                    <a href="#" class="artist-link">Ver portfolio →</a>
-                </div>
-            </div>
-
-            <!-- Artist 6 - Placeholder -->
-            <div class="artist-card" data-artist="artist6">
-                <div class="artist-image">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" alt="Artist Name">
-                </div>
-                <div class="artist-info">
-                    <h3>Artist Name</h3>
-                    <p>Especialidad artística</p>
-                    <a href="#" class="artist-link">Ver portfolio →</a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Portfolio Showcase -->
     <section class="portfolio-showcase">
         <h2 class="section-title">Servicios Destacados</h2>
-        <div class="showcase-item">
-            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&h=600&fit=crop" alt="Live Art">
+        <div class="showcase-item showcase-video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/live-art.mp4" type="video/mp4">
+            </video>
             <div class="showcase-overlay">
                 <h3>Live Art</h3>
             </div>
         </div>
 
-        <div class="showcase-item">
-            <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=1200&h=600&fit=crop" alt="Figurative Works">
+        <div class="showcase-item showcase-video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/figurative-works.mp4" type="video/mp4">
+            </video>
             <div class="showcase-overlay">
                 <h3>Figurative Works and Portraits</h3>
             </div>
         </div>
 
-        <div class="showcase-item">
-            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&h=600&fit=crop" alt="The Human Closet">
+        <div class="showcase-item showcase-video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videoarts.mp4" type="video/mp4">
+            </video>
             <div class="showcase-overlay">
-                <h3>The Human Closet</h3>
+                <h3>Videoarts</h3>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="contact-content">
-            <h2>Contacto</h2>
-            <p>¿Interesado en nuestros artistas o en unirte a VASTART?</p>
-            <div class="contact-info">
-                <a href="mailto:info@vastart.com" class="contact-link">info@vastart.com</a>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">Twitter</a>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Conecta con Nosotros</h2>
+                <p>Desea apoyar a nuestra causa? ¿Quiere escuchar más de nosotros? Estamos aquí para escucharte.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">✉</div>
+                    <h3>Email</h3>
+                    <a href="mailto:info@vastart.com">info@vastart.com</a>
                 </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">Instagram</a>
+                        <a href="#" class="social-btn">Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <p>¿QUIERES UNIRTE?</p>
+                <a href="mailto:info@vastart.com" class="cta-button">UNETE</a>
             </div>
         </div>
     </section>

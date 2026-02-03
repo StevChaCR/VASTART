@@ -27,11 +27,13 @@
     <!-- Hero with Video Background -->
     <section class="artist-hero">
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="https://static.wixstatic.com/media/d78eda_4a40abf8fb974839be98be78e3807149f000.jpg/v1/fill/w_1920,h_1080,al_c,q_90/d78eda_4a40abf8fb974839be98be78e3807149f000.jpg" type="video/mp4">
+            <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+                <source src="assets/humansuit/humansuit.mp4" type="video/mp4">
             </video>
-            <!-- Fallback image since we don't have actual video -->
-            <div class="hero-image-fallback" style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920&h=1080&fit=crop')"></div>
+            <button class="video-sound-btn" id="videoSoundBtn" aria-label="Activar sonido">
+                <span class="sound-off">🔇</span>
+                <span class="sound-on" style="display:none;">🔊</span>
+            </button>
         </div>
         <div class="hero-overlay"></div>
         <div class="artist-hero-content">
@@ -264,6 +266,17 @@
             <div class="lightbox-info">
                 <h4 id="lightboxTitle">Artwork Title</h4>
                 <p id="lightboxDetails">Medium, Size, Year</p>
+                <div class="lightbox-contact">
+                    <p>¿Interesado en esta obra?</p>
+                    <div class="lightbox-contact-btns">
+                        <a href="https://wa.me/50689968690" target="_blank" class="lightbox-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:info@manyuart.com" class="lightbox-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
