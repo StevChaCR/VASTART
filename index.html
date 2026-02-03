@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VASTART - Hub de Artistas</title>
+    <title>VASTART - Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">
-            <span class="logo-vast">VAST</span><span class="logo-art">ART</span>
-        </div>
         <ul class="nav-links">
-            <li><a href="#about" class="nav-link active" data-section="about">About Us</a></li>
-            <li><a href="#artists" class="nav-link" data-section="artists">Artists</a></li>
-            <li><a href="#join" class="nav-link" data-section="join">Join Us!</a></li>
+            <li><a href="#about" class="nav-link">ABOUT US</a></li>
+            <li><a href="#artists" class="nav-link">ARTISTS</a></li>
+            <li><a href="#contact" class="nav-link">CONTACT</a></li>
         </ul>
         <div class="hamburger">
             <span></span>
@@ -25,150 +22,183 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        
-        <!-- About Us Section -->
-        <section id="about" class="section about-section active">
-            <div class="section-content">
-                <h1 class="section-title">Bienvenidos a <span class="highlight">VASTART</span></h1>
-                <div class="about-container">
-                    <div class="about-text">
-                        <p class="lead">Somos una comunidad vibrante de artistas independientes unidos por la pasión de crear y compartir arte.</p>
-                        <p>VASTART nació con la misión de conectar artistas talentosos con personas que buscan piezas únicas, servicios creativos y experiencias artísticas inolvidables.</p>
-                        <p>Aquí encontrarás ilustradores, diseñadores, pintores y creadores de todo tipo, cada uno con su estilo único y listo para dar vida a tus ideas.</p>
-                        <div class="about-stats">
-                            <div class="stat">
-                                <span class="stat-number">1+</span>
-                                <span class="stat-label">Artistas</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">∞</span>
-                                <span class="stat-label">Posibilidades</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Creatividad</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <div class="floating-shapes">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="logo">
+                <span class="logo-vast">VAST</span><span class="logo-art">ART</span>
+            </h1>
+            <div class="logo-divider">
+                <span class="line"></span>
+                <span class="subtitle">ART GALLERY</span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>Sobre Nosotros</h2>
+            <p>VASTART es una galería de arte que conecta artistas emergentes con amantes del arte. Celebramos la creatividad, la expresión y la conexión humana a través del arte.</p>
+            <p>Somos una plataforma de arte multidisciplinaria y comunidad creativa que reúne a artistas con trayectorias sólidas y miradas contemporáneas, junto a personas que desean explorar, aprender y crecer a través del arte.</p>
+            <p>Este es un espacio abierto para quienes deciden emprender el viaje de sus pasiones. Aquí el arte no se presenta como algo distante, sino como un camino que se comparte: a través de obras, experiencias, cursos y procesos guiados por artistas activos que abren su práctica y conocimiento a otros.</p>
+            <p>Creemos en el valor del encuentro, del aprendizaje colectivo y del intercambio genuino. Por eso, VASTART funciona como un ecosistema vivo, donde crear, aprender y conectar forman parte de una misma experiencia.</p>
+            <p>Más que una galería, somos una comunidad en movimiento, un lugar para empaparse del mundo del arte y avanzar acompañado de las figuras más consolidadas en la escena del arte contemporáneo y tradicional.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number" data-target="300">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">INVITADOS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="350">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">CENAS REALIZADAS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="200">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">REGALOS DADOS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="6">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">NAVIDADES SOLIDARIAS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section class="artists" id="artists">
+        <h2 class="section-title">Nuestros Artistas</h2>
+        <div class="artists-grid">
+            <!-- Artist 1 - Man Yu -->
+            <a href="manyu.html" class="artist-card" data-artist="manyu">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop" alt="Man Yu">
+                </div>
+                <div class="artist-info">
+                    <h3>Man Yu</h3>
+                    <p>Interdisciplinary Artist</p>
+                    <span class="artist-link">Ver portfolio →</span>
+                </div>
+            </a>
+
+            <!-- Artist 2 - Placeholder -->
+            <div class="artist-card" data-artist="artist2">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Especialidad artística</p>
+                    <a href="#" class="artist-link">Ver portfolio →</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Artists Section -->
-        <section id="artists" class="section artists-section">
-            <div class="section-content">
-                <h1 class="section-title">Nuestros <span class="highlight">Artistas</span></h1>
-                <p class="section-subtitle">Descubre el talento detrás de cada creación</p>
-                
-                <!-- Artists Grid -->
-                <div class="artists-grid" id="artistsGrid">
-                    <!-- Artists will be loaded dynamically -->
+            <!-- Artist 3 - Placeholder -->
+            <div class="artist-card" data-artist="artist3">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Especialidad artística</p>
+                    <a href="#" class="artist-link">Ver portfolio →</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Artist Profile Modal -->
-        <div class="artist-modal" id="artistModal">
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose">&times;</button>
-                <div class="modal-body" id="modalBody">
-                    <!-- Artist profile content loaded dynamically -->
+            <!-- Artist 4 - Placeholder -->
+            <div class="artist-card" data-artist="artist4">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Especialidad artística</p>
+                    <a href="#" class="artist-link">Ver portfolio →</a>
+                </div>
+            </div>
+
+            <!-- Artist 5 - Placeholder -->
+            <div class="artist-card" data-artist="artist5">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Especialidad artística</p>
+                    <a href="#" class="artist-link">Ver portfolio →</a>
+                </div>
+            </div>
+
+            <!-- Artist 6 - Placeholder -->
+            <div class="artist-card" data-artist="artist6">
+                <div class="artist-image">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Especialidad artística</p>
+                    <a href="#" class="artist-link">Ver portfolio →</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Join Us Section -->
-        <section id="join" class="section join-section">
-            <div class="section-content">
-                <h1 class="section-title">Únete a <span class="highlight">VASTART</span></h1>
-                <p class="section-subtitle">¿Eres artista? ¡Queremos conocerte!</p>
-                
-                <div class="join-container">
-                    <div class="join-benefits">
-                        <h3>¿Por qué unirte?</h3>
-                        <ul class="benefits-list">
-                            <li>
-                                <span class="benefit-icon">🎨</span>
-                                <span>Muestra tu trabajo a una audiencia global</span>
-                            </li>
-                            <li>
-                                <span class="benefit-icon">💰</span>
-                                <span>Vende tus servicios y productos sin comisiones</span>
-                            </li>
-                            <li>
-                                <span class="benefit-icon">🤝</span>
-                                <span>Conecta con otros artistas y colabora</span>
-                            </li>
-                            <li>
-                                <span class="benefit-icon">🚀</span>
-                                <span>Crece tu marca personal</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <form class="join-form" id="joinForm">
-                        <div class="form-group">
-                            <label for="artistName">Nombre artístico</label>
-                            <input type="text" id="artistName" name="artistName" required placeholder="Tu nombre de artista">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="artStyle">Tipo de arte</label>
-                            <select id="artStyle" name="artStyle" required>
-                                <option value="">Selecciona una opción</option>
-                                <option value="illustration">Ilustración</option>
-                                <option value="digital">Arte Digital</option>
-                                <option value="traditional">Arte Tradicional</option>
-                                <option value="photography">Fotografía</option>
-                                <option value="design">Diseño Gráfico</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="portfolio">Link a tu portafolio</label>
-                            <input type="url" id="portfolio" name="portfolio" placeholder="https://tuportafolio.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Cuéntanos sobre ti</label>
-                            <textarea id="message" name="message" rows="4" placeholder="¿Qué te hace único como artista?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <span>Enviar solicitud</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </form>
+    <!-- Portfolio Showcase -->
+    <section class="portfolio-showcase">
+        <h2 class="section-title">Servicios Destacados</h2>
+        <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&h=600&fit=crop" alt="Live Art">
+            <div class="showcase-overlay">
+                <h3>Live Art</h3>
+            </div>
+        </div>
+
+        <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=1200&h=600&fit=crop" alt="Figurative Works">
+            <div class="showcase-overlay">
+                <h3>Figurative Works and Portraits</h3>
+            </div>
+        </div>
+
+        <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&h=600&fit=crop" alt="The Human Closet">
+            <div class="showcase-overlay">
+                <h3>The Human Closet</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Contacto</h2>
+            <p>¿Interesado en nuestros artistas o en unirte a VASTART?</p>
+            <div class="contact-info">
+                <a href="mailto:info@vastart.com" class="contact-link">info@vastart.com</a>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-vast">VAST</span><span class="logo-art">ART</span>
-            </div>
-            <p>Conectando artistas con el mundo</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Discord</a>
-            </div>
+        <div class="footer-logo">
+            <span class="logo-vast">VAST</span><span class="logo-art">ART</span>
         </div>
+        <p>© 2026 VASTART. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

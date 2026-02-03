@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man Yu | VASTART</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="manyu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="artist-page">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark">
+        <a href="index.html" class="back-link">← VASTART</a>
+        <ul class="nav-links">
+            <li><a href="#bio" class="nav-link">Bio</a></li>
+            <li><a href="#artworks" class="nav-link">Artworks</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero with Video Background -->
+    <section class="artist-hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://static.wixstatic.com/media/d78eda_4a40abf8fb974839be98be78e3807149f000.jpg/v1/fill/w_1920,h_1080,al_c,q_90/d78eda_4a40abf8fb974839be98be78e3807149f000.jpg" type="video/mp4">
+            </video>
+            <!-- Fallback image since we don't have actual video -->
+            <div class="hero-image-fallback" style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920&h=1080&fit=crop')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="artist-hero-content">
+            <h1 class="artist-name">Man Yu</h1>
+            <p class="artist-tagline">Interdisciplinary Artist</p>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="artist-bio" id="bio">
+        <div class="bio-content">
+            <div class="bio-image">
+                <img src="assets/man-yu-photo.avif" alt="Man Yu">
+            </div>
+            <div class="bio-text">
+                <h2>Sobre Man Yu</h2>
+                <p class="bio-lead">Man Yu es una artista visual cuyo trabajo se caracteriza por el uso audaz del color y la capacidad de transmitir emociones profundas a través de composiciones vibrantes.</p>
+                <p>Con años de experiencia en ilustración y arte digital, ha desarrollado un estilo único que fusiona técnicas tradicionales con herramientas digitales modernas. Su filosofía artística se centra en la idea de que el color tiene el poder de sanar, inspirar y conectar a las personas.</p>
+                <p>Cada pieza que crea es una invitación a explorar un universo donde las emociones toman forma y color. Su trabajo ha sido exhibido en galerías de Costa Rica y Latinoamérica.</p>
+                <div class="bio-stats">
+                    <div class="bio-stat">
+                        <span class="stat-num">30+</span>
+                        <span class="stat-text">Colecciones</span>
+                    </div>
+                    <div class="bio-stat">
+                        <span class="stat-num">1000+</span>
+                        <span class="stat-text">Obras</span>
+                    </div>
+                    <div class="bio-stat">
+                        <span class="stat-num">1995</span>
+                        <span class="stat-text">Inicio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artworks Collections -->
+    <section class="artworks-section" id="artworks">
+        <h2 class="section-title">Original Artworks</h2>
+        
+        <div class="collections-grid">
+            <!-- Collection 1: Human Suit -->
+            <div class="collection-card" data-collection="human-suit">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg" alt="Human Suit" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Human Suit</h3>
+                    <span class="collection-count">12 works</span>
+                </div>
+            </div>
+
+            <!-- Collection 2: Futurism Series -->
+            <div class="collection-card" data-collection="futuristic-art">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg" alt="Futurism Series" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Futurism Series</h3>
+                    <span class="collection-count">4 works</span>
+                </div>
+            </div>
+
+            <!-- Collection 3: Women from the East -->
+            <div class="collection-card" data-collection="women-east">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg" alt="Women from the East" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Women from the East</h3>
+                    <span class="collection-count">5 works</span>
+                </div>
+            </div>
+
+            <!-- Collection 4: Other Works -->
+            <div class="collection-card" data-collection="other-works">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg" alt="Other Works" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Other Works</h3>
+                    <span class="collection-count">12 works</span>
+                </div>
+            </div>
+
+            <!-- Collection 5: Figurative Works -->
+            <div class="collection-card" data-collection="figurative">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg" alt="Figurative Works" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Figurative Works and Portraits</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 6: Trajines -->
+            <div class="collection-card" data-collection="trajines">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg" alt="Trajines" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Trajines</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 7: Project Woman -->
+            <div class="collection-card" data-collection="project-woman">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg" alt="Project Woman" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Project Woman</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 8: Videoart -->
+            <div class="collection-card" data-collection="videoart">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg" alt="Videoart" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Videoart</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 9: I'm not this Suit -->
+            <div class="collection-card" data-collection="not-this-suit">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg" alt="I'm not this Suit" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>I'm not this Suit</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 10: Love in times of COVID -->
+            <div class="collection-card" data-collection="love-covid">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg" alt="Love in times of COVID" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Love in times of COVID</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 11: Comic: All for Love -->
+            <div class="collection-card" data-collection="all-for-love">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg" alt="All for Love" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Comic: All for Love</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 12: Private Collection -->
+            <div class="collection-card" data-collection="private-collection">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg" alt="Private Collection" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Private Collection Series</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 13: Live Art -->
+            <div class="collection-card" data-collection="live-art">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg" alt="Live Art" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Live Art</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+
+            <!-- Collection 14: The Human Closet -->
+            <div class="collection-card" data-collection="human-closet">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg" alt="The Human Closet" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>The Human Closet</h3>
+                    <span class="collection-count">1 work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Detail Modal -->
+    <div class="collection-modal" id="collectionModal">
+        <div class="modal-header">
+            <button class="modal-back" id="modalBack">← Back to Collections</button>
+            <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-content">
+            <div class="modal-hero">
+                <h2 class="modal-title" id="modalTitle">Human Suit</h2>
+                <p class="modal-description" id="modalDescription">
+                    The first work in the collection was made in 1987. Man Yu, immersed in this premature reflection, first materialized this dense and abstract concept when she was only 9 years old.
+                </p>
+            </div>
+            <h3 class="catalog-title">Catalog</h3>
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Artworks will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Artwork Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-info">
+                <h4 id="lightboxTitle">Artwork Title</h4>
+                <p id="lightboxDetails">Medium, Size, Year</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="artist-contact" id="contact">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <p>Interested in commissioning a piece or purchasing artwork?</p>
+            <div class="contact-methods">
+                <a href="mailto:info@manyuart.com" class="contact-btn">
+                    <span class="btn-icon">✉</span>
+                    info@manyuart.com
+                </a>
+                <a href="tel:+50689968690" class="contact-btn">
+                    <span class="btn-icon">📞</span>
+                    +506 8996 8690
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/manyu.arte/" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/manyuart" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/user/manyufung" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@manyu_oficial" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer artist-footer">
+        <div class="footer-content">
+            <a href="index.html" class="footer-logo">
+                <span class="logo-vast">VAST</span><span class="logo-art">ART</span>
+            </a>
+            <p>San José, Costa Rica</p>
+            <p class="copyright">© 2026 Man Yu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="manyu.js"></script>
+</body>
+</html>

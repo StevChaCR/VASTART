@@ -1,0 +1,572 @@
+/* ============================================
+   Man Yu Artist Page JavaScript
+   Collections, Catalog, Lightbox functionality
+   All artworks from manyuart.com
+   ============================================ */
+
+// ============================================
+// Collections Data - Real artworks from manyuart.com
+// ============================================
+
+const collectionsData = {
+    'human-suit': {
+        title: 'Human Suit',
+        description: 'The first work in the collection was made in 1987. Man Yu, immersed in this premature reflection, first materialized this dense and abstract concept when she was only 9 years old. However, it was not until 2013 when Man Yu felt the call to delve again into this recurring question and reveal it through her brush. The first human suit was painted as an impotent outlet, but the other works are the work of transforming this catharsis into poetry and communication.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg',
+        video: 'TrINOOcpJ50',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg', title: 'Human Suit I', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_e0ff838980fd4e5c98143bbf3c1fdbe5~mv2.jpg', title: 'Human Suit II', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_807a25637a1e43ed8298bce0111991aa~mv2.jpg', title: 'Human Suit III', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_9b7e45e4c02047f3b81fbabe79159c74~mv2.jpg', title: 'Human Suit IV', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_52f842eb3771457592635a912435b10d~mv2.jpg', title: 'Human Suit V', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_5159ff2efcfc465e927d22de36a98211~mv2.jpg', title: 'Human Suit VI', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_2d64936b06cd42b292b7e252940741f1~mv2.jpg', title: 'Human Suit VII', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_da73a21b8a0f4706b61fe5b834e9c6bd~mv2.jpg', title: 'Human Suit VIII', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_6364e17f4c7f4e89aa45b3e7f1c737ef~mv2.jpg', title: 'Human Suit IX', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_606d5d2294124ffe98c3686466c73403~mv2.jpg', title: 'Human Suit X', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_b68d1ef6076a46e5bf82948d5297504c~mv2.jpg', title: 'Human Suit XI', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_4dc77aa0263545eaa16593276e2e7754~mv2.jpg', title: 'Human Suit XII', details: 'Available - Contact for pricing' },
+        ]
+    },
+    'futuristic-art': {
+        title: 'Futurism Series',
+        description: 'A visionary exploration of humanity\'s relationship with technology and the future. These works blend traditional techniques with digital elements to create a unique perspective on what lies ahead, merging the organic with the synthetic.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg', title: 'Futurism I', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_150bed0f91cc4c05970e0caf59908726~mv2.jpg', title: 'Futurism II', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_7f0e86f2fddc4384a61cfe9b8b882473~mv2.jpeg', title: 'Futurism III', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_21d6117a2a9745a9b8469018d22b9c3c~mv2.jpeg', title: 'Futurism IV', details: 'Available - Contact for pricing' },
+        ]
+    },
+    'women-east': {
+        title: 'Women from the East Series',
+        description: 'A celebration of feminine strength and cultural heritage. This series explores the identity, traditions, and contemporary reality of Asian women through vibrant colors and symbolic imagery, honoring the complexity and beauty of Eastern femininity.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg', title: 'Women from the East I', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_88532c6eb1b5455f886f1559975ec835~mv2.jpg', title: 'Women from the East II', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_93fda4d3906f437684e3c11e63347192~mv2.jpg', title: 'Women from the East III', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_753079c870194965929a4bc69b2a397f~mv2.jpg', title: 'Women from the East IV', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_a1e557cf084f4497b0135e560119167a~mv2.jpg', title: 'Women from the East V', details: 'Available - Contact for pricing' },
+        ]
+    },
+    'other-works': {
+        title: 'Other Works',
+        description: 'A diverse collection of works that showcase the breadth of Man Yu\'s artistic vision. These pieces span various themes, techniques, and periods, offering a comprehensive view of her creative journey.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg', title: 'Artwork I', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_8b6b098b140f497b93b874c50df7ab08~mv2.jpg', title: 'Artwork II', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_a474a1d13a484465a9545b9abd437461~mv2.jpg', title: 'Artwork III', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_c35862bf50e44affa362d60e31a5a03e~mv2.jpg', title: 'Artwork IV', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_bc803bb65b6f4fd6a6dd93cf599a5d04~mv2.jpg', title: 'Artwork V', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_28fa09aab74b44a8aabd1f28b66eee33~mv2.jpg', title: 'Artwork VI', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_77b8751179784b11b999c3ae11efbb85~mv2.jpg', title: 'Artwork VII', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_1843663b2b5845fc883d5099d68ed64b~mv2.jpg', title: 'Artwork VIII', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_ea25a15a27824e289b003f16abc3ec95~mv2.jpg', title: 'Artwork IX', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_933ac5f9af514e578eba724707b1ce35~mv2.jpg', title: 'Artwork X', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_ae75ce6ae88e4eddac6f351b7188f7b8~mv2.jpg', title: 'Artwork XI', details: 'Available - Contact for pricing' },
+            { image: 'https://static.wixstatic.com/media/d78eda_9de0c6a708174958af6ff19a5f30c565~mv2.jpg', title: 'Artwork XII', details: 'Available - Contact for pricing' },
+        ]
+    },
+    'figurative': {
+        title: 'Figurative Works and Portraits',
+        description: 'Classical techniques meet contemporary vision in these figurative works and portraits. Each piece captures the essence of the human form while exploring deeper emotional narratives and psychological depth.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg', title: 'Portrait I', details: 'Contact for availability' },
+        ]
+    },
+    'trajines': {
+        title: 'Trajines',
+        description: 'A series exploring movement, daily life, and the rhythm of human existence. These works capture the essence of everyday activities transformed into artistic expression.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg', title: 'Trajines I', details: 'Contact for availability' },
+        ]
+    },
+    'project-woman': {
+        title: 'Project Woman',
+        description: 'An ongoing project that celebrates womanhood in all its forms. These works explore themes of identity, strength, vulnerability, and the evolving role of women in contemporary society.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg', title: 'Project Woman I', details: 'Contact for availability' },
+        ]
+    },
+    'videoart': {
+        title: 'Videoart',
+        description: 'Moving images that explore time, space, and emotion. These video works combine visual art with sound design to create immersive experiences that challenge perception.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg', title: 'Videoart I', details: 'Video installation' },
+        ]
+    },
+    'not-this-suit': {
+        title: "I'm not this Suit",
+        description: 'A powerful statement on identity and the masks we wear in society. This series challenges viewers to question the facades we present versus our authentic selves.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg', title: "I'm not this Suit I", details: 'Contact for availability' },
+        ]
+    },
+    'love-covid': {
+        title: 'Love in times of COVID',
+        description: 'Created during the global pandemic, this series explores human connection, isolation, and love in extraordinary circumstances. A reflection on resilience and the enduring nature of human bonds.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg', title: 'Love in times of COVID I', details: 'Contact for availability' },
+        ]
+    },
+    'all-for-love': {
+        title: 'Comic: All for Love',
+        description: 'A narrative journey told through comic art, exploring the depths and dimensions of love in all its forms. This series combines storytelling with visual art.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg', title: 'All for Love I', details: 'Contact for availability' },
+        ]
+    },
+    'private-collection': {
+        title: 'Private Collection Series',
+        description: 'Exclusive works created for private collectors. These pieces represent some of Man Yu\'s most intimate and personal artistic expressions.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg', title: 'Private Collection I', details: 'Sold - Private Collection' },
+        ]
+    },
+    'live-art': {
+        title: 'Live Art',
+        description: 'Performance and live painting sessions captured in photographs and video. These works represent the ephemeral nature of creation and the intimate connection between artist and audience.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg', title: 'Live Art I', details: 'Performance documentation' },
+        ]
+    },
+    'human-closet': {
+        title: 'The Human Closet',
+        description: 'An introspective series exploring the masks we wear and the personas we create. Each piece delves into the complexity of human identity and the gap between public perception and private reality.',
+        coverImage: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg',
+        artworks: [
+            { image: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg', title: 'The Human Closet I', details: 'Contact for availability' },
+        ]
+    }
+};
+
+// ============================================
+// DOM Elements
+// ============================================
+
+const navbar = document.querySelector('.navbar');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const collectionCards = document.querySelectorAll('.collection-card');
+const collectionModal = document.getElementById('collectionModal');
+const modalBack = document.getElementById('modalBack');
+const modalClose = document.getElementById('modalClose');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const catalogGrid = document.getElementById('catalogGrid');
+const lightbox = document.getElementById('lightbox');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDetails = document.getElementById('lightboxDetails');
+
+let currentArtworks = [];
+let currentImageIndex = 0;
+
+// ============================================
+// Navbar Scroll Effect
+// ============================================
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ============================================
+// Mobile Menu
+// ============================================
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// ============================================
+// Collection Cards
+// ============================================
+
+collectionCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const collectionId = card.dataset.collection;
+        openCollection(collectionId);
+    });
+});
+
+function openCollection(collectionId) {
+    const collection = collectionsData[collectionId];
+    if (!collection) return;
+
+    modalTitle.textContent = collection.title;
+    modalDescription.textContent = collection.description;
+    currentArtworks = collection.artworks;
+
+    // Render catalog grid
+    catalogGrid.innerHTML = '';
+
+    // If collection has a featured video, render a large video tile first
+    if (collection.video) {
+        const videoItem = document.createElement('div');
+        videoItem.className = 'catalog-video';
+        // Use helper to set up the thumbnail and event handlers
+        setupVideoTile(videoItem, collection.video, collection.title);
+        catalogGrid.appendChild(videoItem);
+    }
+
+    collection.artworks.forEach((artwork, index) => {
+        const item = document.createElement('div');
+        item.className = 'catalog-item';
+        item.innerHTML = `
+            <img src="${artwork.image}" alt="${artwork.title}" loading="lazy">
+            <div class="catalog-item-overlay">
+                <h4>${artwork.title}</h4>
+                <p>${artwork.details}</p>
+            </div>
+        `;
+        item.addEventListener('click', () => openLightbox(index));
+        catalogGrid.appendChild(item);
+    });
+
+    collectionModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCollection() {
+    collectionModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+modalBack.addEventListener('click', closeCollection);
+modalClose.addEventListener('click', closeCollection);
+
+// ============================================
+// Lightbox
+// ============================================
+
+function openLightbox(index) {
+    currentImageIndex = index;
+    updateLightbox();
+    lightbox.classList.add('active');
+}
+
+// Open a YouTube video in the lightbox (click is a user gesture so autoplay with sound is allowed)
+function openLightboxVideo(videoId, title, details = '') {
+    // remove any existing iframe
+    const existingIframe = document.getElementById('lightboxIframe');
+    if (existingIframe) existingIframe.remove();
+
+    // hide the image element
+    lightboxImage.style.display = 'none';
+
+    const iframe = document.createElement('iframe');
+    iframe.id = 'lightboxIframe';
+    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&mute=0&controls=1`;
+    iframe.setAttribute('allow', 'autoplay; fullscreen');
+    iframe.setAttribute('loading', 'eager');
+    iframe.style.width = '100%';
+    iframe.style.height = '70vh';
+    iframe.style.border = '0';
+
+    const container = document.querySelector('.lightbox-content');
+    container.prepend(iframe);
+
+    lightboxTitle.textContent = title;
+    lightboxDetails.textContent = details;
+
+    lightbox.classList.add('active');
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    // remove video iframe if present to stop playback
+    const iframe = document.getElementById('lightboxIframe');
+    if (iframe) iframe.remove();
+    // restore image element
+    lightboxImage.style.display = 'block';
+}
+
+function updateLightbox() {
+    // remove any video iframe that might be present
+    const existingIframe = document.getElementById('lightboxIframe');
+    if (existingIframe) existingIframe.remove();
+    lightboxImage.style.display = 'block';
+
+    const artwork = currentArtworks[currentImageIndex];
+    lightboxImage.src = artwork.image;
+    lightboxImage.alt = artwork.title;
+    lightboxTitle.textContent = artwork.title;
+    lightboxDetails.textContent = artwork.details;
+}
+
+// Play video inline inside the catalog tile (user gesture required for autoplay with sound)
+function playVideoInline(videoId, videoItem, title) {
+    if (!videoItem.dataset.thumbHtml) videoItem.dataset.thumbHtml = videoItem.innerHTML;
+
+    videoItem.classList.add('playing');
+    // show a loading state
+    videoItem.innerHTML = `
+        <div class="catalog-video-inner playing loading">
+            <div class="catalog-loader">Cargando reproductor…</div>
+            <div class="catalog-item-overlay playing">
+                <h4>${title} — Video</h4>
+                <p>Preparando reproducción</p>
+            </div>
+        </div>
+    `;
+
+    const embedSrc = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&controls=1&playsinline=1`;
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', embedSrc);
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen');
+    iframe.setAttribute('referrerpolicy', 'origin');
+    iframe.setAttribute('loading', 'eager');
+    iframe.setAttribute('title', title);
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+
+    let handled = false;
+    const timeoutId = setTimeout(() => {
+        if (!handled) {
+            handled = true;
+            handleIframeFailure(videoItem, videoId, title);
+        }
+    }, 6000);
+
+    iframe.onload = () => {
+        if (handled) return;
+        handled = true;
+        clearTimeout(timeoutId);
+        // Replace loading UI with the iframe and a close button
+        videoItem.innerHTML = `
+            <div class="catalog-video-inner playing">
+            </div>
+        `;
+        const inner = videoItem.querySelector('.catalog-video-inner');
+        inner.appendChild(iframe);
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'catalog-video-close';
+        closeBtn.setAttribute('aria-label', 'Cerrar video');
+        closeBtn.innerHTML = '&times;';
+        inner.appendChild(closeBtn);
+        const overlay = document.createElement('div');
+        overlay.className = 'catalog-item-overlay playing';
+        overlay.innerHTML = `<h4>${title} — Video</h4><p>Reproduciendo</p>`;
+        inner.appendChild(overlay);
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (videoItem.dataset.thumbHtml) {
+                videoItem.innerHTML = videoItem.dataset.thumbHtml;
+                setupVideoTile(videoItem, videoId, title);
+                videoItem.classList.remove('playing');
+            }
+        });
+    };
+
+    iframe.onerror = () => {
+        if (handled) return;
+        handled = true;
+        clearTimeout(timeoutId);
+        handleIframeFailure(videoItem, videoId, title);
+    };
+
+    // insert iframe (it will trigger load or error)
+    // append to a temporary container so onload/onerror fire reliably
+    const temp = document.createElement('div');
+    temp.style.width = '0';
+    temp.style.height = '0';
+    temp.style.overflow = 'hidden';
+    temp.appendChild(iframe);
+    document.body.appendChild(temp);
+}
+
+function handleIframeFailure(videoItem, videoId, title) {
+    // replace tile with fallback UI and a diagnostic button
+    const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+    videoItem.innerHTML = `
+        <div class="catalog-video-inner error">
+            <img src="${thumb}" alt="${title} — Thumbnail">
+            <div class="catalog-error">
+                <p><strong>Video no disponible aquí</strong></p>
+                <p class="error-reason">Puede estar bloqueado por la configuración del canal o por extensiones/privacy.</p>
+                <div class="error-actions">
+                    <a class="catalog-video-link" href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+                    <button class="catalog-error-details">Ver detalles</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    const detailsBtn = videoItem.querySelector('.catalog-error-details');
+    detailsBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        // Attempt to fetch oEmbed to provide a helpful diagnostic
+        const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
+        try {
+            const res = await fetch(oembedUrl);
+            if (!res.ok) throw new Error(`oEmbed returned ${res.status}`);
+            const data = await res.json();
+            alert(`Información del video:\nTítulo: ${data.title}\nAutor: ${data.author_name}\nProbablemente el reproductor fue bloqueado por extensiones, políticas del sitio o la opción "Permitir incrustación" está desactivada.`);
+        } catch (err) {
+            alert(`No se pudo obtener información del video: ${err.message}\nPrueba en modo incógnito o desactiva extensiones de bloqueo.`);
+        }
+    });
+}
+
+// Setup the tile with thumbnail and attach handlers
+function setupVideoTile(videoItem, videoId, title) {
+    const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+    videoItem.innerHTML = `
+        <div class="catalog-video-inner video-fallback">
+            <img src="${thumb}" alt="${title} — Video thumbnail" loading="lazy">
+            <button class="catalog-video-play large" aria-label="Reproducir video"></button>
+            <div class="catalog-item-overlay">
+                <h4>${title} — Video</h4>
+                <p>Ver video</p>
+            </div>
+        </div>
+    `;
+    videoItem.dataset.thumbHtml = videoItem.innerHTML;
+
+    const openHandler = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        playVideoInline(videoId, videoItem, title);
+    };
+    const playBtn = videoItem.querySelector('.catalog-video-play');
+    playBtn.addEventListener('click', openHandler);
+    videoItem.addEventListener('click', openHandler);
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % currentArtworks.length;
+    updateLightbox();
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + currentArtworks.length) % currentArtworks.length;
+    updateLightbox();
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxNext.addEventListener('click', nextImage);
+lightboxPrev.addEventListener('click', prevImage);
+
+// Close lightbox on background click
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+// ============================================
+// Keyboard Navigation
+// ============================================
+
+document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+    } else if (collectionModal.classList.contains('active')) {
+        if (e.key === 'Escape') closeCollection();
+    }
+});
+
+// ============================================
+// Smooth Scroll
+// ============================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ============================================
+// Intersection Observer for Animations
+// ============================================
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px'
+};
+
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Animate elements on scroll
+document.querySelectorAll('.collection-card, .bio-content, .artist-contact').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    fadeObserver.observe(el);
+});
+
+// Stagger animation for collection cards
+document.querySelectorAll('.collection-card').forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+});
+
+// ============================================
+// Dynamic Collection Card Images
+// ============================================
+
+// Update collection card images from data
+document.addEventListener('DOMContentLoaded', () => {
+    collectionCards.forEach(card => {
+        const collectionId = card.dataset.collection;
+        const collection = collectionsData[collectionId];
+        if (collection && collection.coverImage) {
+            const img = card.querySelector('.collection-fallback');
+            if (img) {
+                img.src = collection.coverImage;
+            }
+        }
+        // Update artwork count
+        if (collection) {
+            const countEl = card.querySelector('.collection-count');
+            if (countEl) {
+                countEl.textContent = `${collection.artworks.length} works`;
+            }
+        }
+    });
+});

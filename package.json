@@ -1,0 +1,15 @@
+{
+  "name": "vastart-scraper",
+  "version": "1.0.0",
+  "description": "Scraper to extract Man Yu 'Human Suit' artworks and update manyu.js",
+  "main": "scripts/scrape_traje_humano.js",
+  "scripts": {
+    "scrape": "node scripts/scrape_traje_humano.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
