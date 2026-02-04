@@ -9,9 +9,11 @@
 
 const collectionsData = {
     'human-suit': {
-        title: 'Human Suit',
-        description: 'The first work in the collection was made in 1987. Man Yu, immersed in this premature reflection, first materialized this dense and abstract concept when she was only 9 years old. However, it was not until 2013 when Man Yu felt the call to delve again into this recurring question and reveal it through her brush. The first human suit was painted as an impotent outlet, but the other works are the work of transforming this catharsis into poetry and communication.',
+        title: 'Traje Humano',
+        titleImage: 'assets/trajehumano.png',
+        description: 'La primera obra de la colección fue realizada en 1987. Man Yu, inmersa en esta reflexión prematura, materializó por primera vez este concepto denso y abstracto cuando solo tenía 9 años. Sin embargo, no fue hasta 2013 cuando Man Yu sintió la necesidad de volver a profundizar en esta pregunta recurrente y revelarla a través de su pincel. El primer traje humano fue pintado como una salida impotente, pero las demás obras son el resultado de transformar esta catarsis en poesía y comunicación.',
         coverImage: 'assets/humansuit/El abrazo. 2018. Óleo.150x150cm.jpg',
+        localVideo: 'assets/humansuit/humansuit.mp4',
         artworks: [
             { image: 'assets/humansuit/Algunos ojos abiertos.jpg', title: "Algunos ojos abiertos", details: "Óleo" },
             { image: 'assets/humansuit/Apego. 2018. Óleo. 116,0 x 81,5 cm.jpg', title: "Apego", details: "2018. Óleo. 116,0 x 81,5 cm" },
@@ -44,8 +46,8 @@ const collectionsData = {
         ]
     },
     'futuristic-art': {
-        title: 'Futurism Series',
-        description: 'A visionary exploration of humanity\'s relationship with technology and the future. These works blend traditional techniques with digital elements to create a unique perspective on what lies ahead, merging the organic with the synthetic.',
+        title: 'Serie Futurista',
+        description: 'Una exploración visionaria de la relación de la humanidad con la tecnología y el futuro. Estas obras combinan técnicas tradicionales con elementos digitales para crear una perspectiva única de lo que viene, fusionando lo orgánico con lo sintético.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg', title: 'Futurism I', details: 'Available - Contact for pricing' },
@@ -55,8 +57,8 @@ const collectionsData = {
         ]
     },
     'women-east': {
-        title: 'Women from the East Series',
-        description: 'A celebration of feminine strength and cultural heritage. This series explores the identity, traditions, and contemporary reality of Asian women through vibrant colors and symbolic imagery, honoring the complexity and beauty of Eastern femininity.',
+        title: 'Mujeres Del Este',
+        description: 'Una celebración de la fuerza femenina y el patrimonio cultural. Esta serie explora la identidad, las tradiciones y la realidad contemporánea de las mujeres asiáticas a través de colores vibrantes e imágenes simbólicas, honrando la complejidad y la belleza de la feminidad oriental.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg', title: 'Women from the East I', details: 'Available - Contact for pricing' },
@@ -66,100 +68,127 @@ const collectionsData = {
             { image: 'https://static.wixstatic.com/media/d78eda_a1e557cf084f4497b0135e560119167a~mv2.jpg', title: 'Women from the East V', details: 'Available - Contact for pricing' },
         ]
     },
-    'other-works': {
-        title: 'Other Works',
-        description: 'A diverse collection of works that showcase the breadth of Man Yu\'s artistic vision. These pieces span various themes, techniques, and periods, offering a comprehensive view of her creative journey.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg',
-        artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg', title: 'Artwork I', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_8b6b098b140f497b93b874c50df7ab08~mv2.jpg', title: 'Artwork II', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_a474a1d13a484465a9545b9abd437461~mv2.jpg', title: 'Artwork III', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_c35862bf50e44affa362d60e31a5a03e~mv2.jpg', title: 'Artwork IV', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_bc803bb65b6f4fd6a6dd93cf599a5d04~mv2.jpg', title: 'Artwork V', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_28fa09aab74b44a8aabd1f28b66eee33~mv2.jpg', title: 'Artwork VI', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_77b8751179784b11b999c3ae11efbb85~mv2.jpg', title: 'Artwork VII', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_1843663b2b5845fc883d5099d68ed64b~mv2.jpg', title: 'Artwork VIII', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_ea25a15a27824e289b003f16abc3ec95~mv2.jpg', title: 'Artwork IX', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_933ac5f9af514e578eba724707b1ce35~mv2.jpg', title: 'Artwork X', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_ae75ce6ae88e4eddac6f351b7188f7b8~mv2.jpg', title: 'Artwork XI', details: 'Available - Contact for pricing' },
-            { image: 'https://static.wixstatic.com/media/d78eda_9de0c6a708174958af6ff19a5f30c565~mv2.jpg', title: 'Artwork XII', details: 'Available - Contact for pricing' },
-        ]
-    },
     'figurative': {
-        title: 'Figurative Works and Portraits',
-        description: 'Classical techniques meet contemporary vision in these figurative works and portraits. Each piece captures the essence of the human form while exploring deeper emotional narratives and psychological depth.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg',
+        title: 'Obras Figurativas y Retratos',
+        description: 'Técnicas clásicas se encuentran con una visión contemporánea en estas obras figurativas y retratos. Cada pieza captura la esencia de la forma humana mientras explora narrativas emocionales más profundas y profundidad psicológica.',
+        coverImage: 'assets/figurativeandportraits/pastel chalk/El director. 2015. Tiza pastel. 61x46,5.jpg',
+        localVideo: 'assets/figurative-works.mp4',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg', title: 'Portrait I', details: 'Contact for availability' },
+            // === ACRÍLICO ===
+            { type: 'separator', title: 'Acrílico' },
+            { image: 'assets/figurativeandportraits/acrilico/Arma de fuego. 2015. Mixta. 70x50 cm.jpg', title: 'Arma de fuego', details: '2015. Mixta. 70x50 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/Desplegando_Alas._AcrÃ_lico._57x78_cm.JPG.jpg', title: 'Desplegando Alas', details: 'Acrílico. 57x78 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/La_rutina._AcrÃ_lico._57x73_cm.jpg', title: 'La rutina', details: 'Acrílico. 57x73 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/La_Vecina._AcrÃ_lico._95x135_cm.JPG.jpg', title: 'La Vecina', details: 'Acrílico. 95x135 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/Mujer y pasado. 2022. Acrílico. 50x50 cm.jpg', title: 'Mujer y pasado', details: '2022. Acrílico. 50x50 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/Ojos._2015._AcrÃ_lico._70x50_cm.jpg', title: 'Ojos', details: '2015. Acrílico. 70x50 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/Preso._2017._AcrÃ_lico._50x70cm.JPG.jpg', title: 'Preso', details: '2017. Acrílico. 50x70 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/Retrato de mujer pelirroja. 2016. Acrílico. 103x103 cm.jpg', title: 'Retrato de mujer pelirroja', details: '2016. Acrílico. 103x103 cm' },
+            { image: 'assets/figurativeandportraits/acrilico/v_Mayo_verde._AcrÃ_lico._57x73_cm.jpg', title: 'Mayo verde', details: 'Acrílico. 57x73 cm' },
+            // === OBRAS MIXTAS ===
+            { type: 'separator', title: 'Obras Mixtas' },
+            { image: 'assets/figurativeandportraits/Mixed works/Bajo_la_Misma_Lluvia_edited.jpg', title: 'Bajo la Misma Lluvia', details: 'Técnica mixta' },
+            { image: 'assets/figurativeandportraits/Mixed works/Brisa de mayo. 2020. Mixta. 122x91 cm.jpg', title: 'Brisa de mayo', details: '2020. Mixta. 122x91 cm' },
+            { image: 'assets/figurativeandportraits/Mixed works/Ojos 2. Óleo. 25,4x20,3 cm.JPG.jpg', title: 'Ojos 2', details: 'Óleo. 25,4x20,3 cm' },
+            { image: 'assets/figurativeandportraits/Mixed works/v Bajo mi lluvia. Acuarela. 55x75 cm.jpg', title: 'Bajo mi lluvia', details: 'Acuarela. 55x75 cm' },
+            { image: 'assets/figurativeandportraits/Mixed works/WhatsApp Image 2024-10-28 at 19.56.18.jpeg', title: 'Obra mixta', details: 'Técnica mixta' },
+            // === TIZA PASTEL ===
+            { type: 'separator', title: 'Tiza Pastel' },
+            { image: 'assets/figurativeandportraits/pastel chalk/A cántaros. 2007. Tiza pastel. 70,5x99,0.jpg', title: 'A cántaros', details: '2007. Tiza pastel. 70,5x99,0 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/AgonÃ_a._2009._Tiza_pastel._60x36_cm.jpg', title: 'Agonía', details: '2009. Tiza pastel. 60x36 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Anzuelo. 2008. Tiza pastel. 98x58,5 cm.JPG.jpg', title: 'Anzuelo', details: '2008. Tiza pastel. 98x58,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Arrastro. 2007. Tiza pastel. 98x58,5 cm.jpg', title: 'Arrastro', details: '2007. Tiza pastel. 98x58,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Bomba_de_jabÃ³n._2007._Tiza_pastel._48,5.jpg', title: 'Bomba de jabón', details: '2007. Tiza pastel. 48,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/ConfusiÃ³n._2007._Tiza_pastel._45x57_cm.jpg', title: 'Confusión', details: '2007. Tiza pastel. 45x57 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El director. 2015. Tiza pastel. 61x46,5.jpg', title: 'El director', details: '2015. Tiza pastel. 61x46,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El duelo. 2007. Tiza pastel. 84,5x64,5 cm.jpg', title: 'El duelo', details: '2007. Tiza pastel. 84,5x64,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El embeleso. 2007. Tiza pastel. 65,7x86,8 cm.jpg', title: 'El embeleso', details: '2007. Tiza pastel. 65,7x86,8 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El escritor. Tiza pastel. 46,5x61 cm.jpg', title: 'El escritor', details: 'Tiza pastel. 46,5x61 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El recinto oscuro. 2009. Tiza pastel. 70x106 cm.jpg', title: 'El recinto oscuro', details: '2009. Tiza pastel. 70x106 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/El_collar_robado_de_PelÃ©._2009._Tiza_pa.jpg', title: 'El collar robado de Pelé', details: '2009. Tiza pastel' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Hermandad. 2008. Tiza pastel. 60x36 cm.j.jpg', title: 'Hermandad', details: '2008. Tiza pastel. 60x36 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/La espera. 2008. Tiza pastel. 64x89 cm.j.jpg', title: 'La espera', details: '2008. Tiza pastel. 64x89 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Mujer y agua. 2011. Tiza pastel. 41,5x61,5 cm.jpg', title: 'Mujer y agua', details: '2011. Tiza pastel. 41,5x61,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/Nacimiento_de_un_sueÃ±o_singular._2008._.jpg', title: 'Nacimiento de un sueño singular', details: '2008. Tiza pastel' },
+            { image: 'assets/figurativeandportraits/pastel chalk/NoctÃ¡mbula._2010._Tiza_pastel._65x92_cm.jpg', title: 'Noctámbula', details: '2010. Tiza pastel. 65x92 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/ResignaciÃ³n._2007._Tiza_pastel._41,5x61,5_cm.jpg', title: 'Resignación', details: '2007. Tiza pastel. 41,5x61,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Autoretrato. 2005. Tiza pastel. 107x71.jpg', title: 'Autoretrato', details: '2005. Tiza pastel. 107x71 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Balina. Tiza pastel. 30x36 cm.jpg', title: 'Balina', details: 'Tiza pastel. 30x36 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Don Pepe. Tiza pastel. 30x36 cm.JPG.jpg', title: 'Don Pepe', details: 'Tiza pastel. 30x36 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Gemelos. 2005. Tiza pastel. 58x46 cm.J.jpg', title: 'Gemelos', details: '2005. Tiza pastel. 58x46 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Inocencia. Tiza pastel. 71x107 cm.jpg', title: 'Inocencia', details: 'Tiza pastel. 71x107 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v John. Tiza pastel. 107x71 cm.jpg', title: 'John', details: 'Tiza pastel. 107x71 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Marilyn. 44,5x52,5 cm.jpg', title: 'Marilyn', details: '44,5x52,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Mujer pensativa. Tiza pastel. 62,5x92,5 cm.jpg', title: 'Mujer pensativa', details: 'Tiza pastel. 62,5x92,5 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v Trupy. Tiza pastel. 30x36 cm.jpg', title: 'Trupy', details: 'Tiza pastel. 30x36 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v_DoÃ±a_Pepe._Tiza_pastel._Tiza_pastel._.jpg', title: 'Doña Pepe', details: 'Tiza pastel' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v_NiÃ±a_de_verde._Tiza_pastel._35x40_cm..jpg', title: 'Niña de verde', details: 'Tiza pastel. 35x40 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v_NiÃ±a_y_cielo._Tiza_pastel._35x40_cm.j.jpg', title: 'Niña y cielo', details: 'Tiza pastel. 35x40 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v_SeÃ±ora_Huang._Tiza_pastel._45x60cm.jp.jpg', title: 'Señora Huang', details: 'Tiza pastel. 45x60 cm' },
+            { image: 'assets/figurativeandportraits/pastel chalk/v_SeÃ±orita_Huang._Tiza_pastel._45x60cm..jpg', title: 'Señorita Huang', details: 'Tiza pastel. 45x60 cm' }
         ]
     },
     'trajines': {
         title: 'Trajines',
-        description: 'A series exploring movement, daily life, and the rhythm of human existence. These works capture the essence of everyday activities transformed into artistic expression.',
+        description: 'Una serie que explora el movimiento, la vida cotidiana y el ritmo de la existencia humana. Estas obras capturan la esencia de las actividades diarias transformadas en expresión artística.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg', title: 'Trajines I', details: 'Contact for availability' },
         ]
     },
     'project-woman': {
-        title: 'Project Woman',
-        description: 'An ongoing project that celebrates womanhood in all its forms. These works explore themes of identity, strength, vulnerability, and the evolving role of women in contemporary society.',
+        title: 'Proyecto Mujer',
+        description: 'Un proyecto en curso que celebra la feminidad en todas sus formas. Estas obras exploran temas de identidad, fuerza, vulnerabilidad y el rol evolutivo de las mujeres en la sociedad contemporánea.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg', title: 'Project Woman I', details: 'Contact for availability' },
         ]
     },
     'videoart': {
-        title: 'Videoart',
-        description: 'Moving images that explore time, space, and emotion. These video works combine visual art with sound design to create immersive experiences that challenge perception.',
+        title: 'VideoArte',
+        description: 'Imágenes en movimiento que exploran el tiempo, el espacio y la emoción. Estas obras de video combinan arte visual con diseño de sonido para crear experiencias inmersivas que desafían la percepción.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg',
+        localVideo: 'assets/videoarts.mp4',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg', title: 'Videoart I', details: 'Video installation' },
+            { image: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg', title: 'VideoArte I', details: 'Instalación de video' },
         ]
     },
     'not-this-suit': {
-        title: "I'm not this Suit",
-        description: 'A powerful statement on identity and the masks we wear in society. This series challenges viewers to question the facades we present versus our authentic selves.',
+        title: 'No Soy Este Traje',
+        description: 'Una poderosa declaración sobre la identidad y las máscaras que usamos en la sociedad. Esta serie desafía a los espectadores a cuestionar las fachadas que presentamos versus nuestro yo auténtico.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg', title: "I'm not this Suit I", details: 'Contact for availability' },
         ]
     },
-    'love-covid': {
-        title: 'Love in times of COVID',
-        description: 'Created during the global pandemic, this series explores human connection, isolation, and love in extraordinary circumstances. A reflection on resilience and the enduring nature of human bonds.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg',
-        artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg', title: 'Love in times of COVID I', details: 'Contact for availability' },
-        ]
-    },
     'all-for-love': {
-        title: 'Comic: All for Love',
-        description: 'A narrative journey told through comic art, exploring the depths and dimensions of love in all its forms. This series combines storytelling with visual art.',
+        title: 'Comic: Todo por Amor',
+        description: 'Un viaje narrativo contado a través del arte del cómic, explorando las profundidades y dimensiones del amor en todas sus formas. Esta serie combina la narración con el arte visual.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg', title: 'All for Love I', details: 'Contact for availability' },
         ]
     },
     'private-collection': {
-        title: 'Private Collection Series',
-        description: 'Exclusive works created for private collectors. These pieces represent some of Man Yu\'s most intimate and personal artistic expressions.',
+        title: 'Colección Privada',
+        description: 'Obras exclusivas creadas para coleccionistas privados. Estas piezas representan algunas de las expresiones artísticas más íntimas y personales de Man Yu.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg', title: 'Private Collection I', details: 'Sold - Private Collection' },
         ]
     },
     'live-art': {
-        title: 'Live Art',
-        description: 'Performance and live painting sessions captured in photographs and video. These works represent the ephemeral nature of creation and the intimate connection between artist and audience.',
+        title: 'Arte en Vivo',
+        description: 'Sesiones de performance y pintura en vivo capturadas en fotografías y video. Estas obras representan la naturaleza efímera de la creación y la conexión íntima entre el artista y el público.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg',
+        localVideo: 'assets/live-art.mp4',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg', title: 'Live Art I', details: 'Performance documentation' },
+            { image: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg', title: 'Arte en Vivo I', details: 'Documentación de performance' },
         ]
     },
     'human-closet': {
-        title: 'The Human Closet',
-        description: 'An introspective series exploring the masks we wear and the personas we create. Each piece delves into the complexity of human identity and the gap between public perception and private reality.',
+        title: 'El Armario Humano',
+        description: 'Una serie introspectiva que explora las máscaras que usamos y las personas que creamos. Cada pieza profundiza en la complejidad de la identidad humana y la brecha entre la percepción pública y la realidad privada.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg',
         artworks: [
             { image: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg', title: 'The Human Closet I', details: 'Contact for availability' },
@@ -262,18 +291,85 @@ collectionCards.forEach(card => {
     });
 });
 
+// ============================================
+// Modal Video Sound Control
+// ============================================
+
+const modalSoundBtn = document.getElementById('modalSoundBtn');
+
+if (modalSoundBtn) {
+    modalSoundBtn.addEventListener('click', () => {
+        const modalVideo = document.getElementById('modalVideo');
+        const soundOff = modalSoundBtn.querySelector('.sound-off');
+        const soundOn = modalSoundBtn.querySelector('.sound-on');
+
+        if (modalVideo.muted) {
+            modalVideo.muted = false;
+            soundOff.style.display = 'none';
+            soundOn.style.display = 'inline';
+        } else {
+            modalVideo.muted = true;
+            soundOff.style.display = 'inline';
+            soundOn.style.display = 'none';
+        }
+    });
+}
+
 function openCollection(collectionId) {
     const collection = collectionsData[collectionId];
     if (!collection) return;
 
-    modalTitle.textContent = collection.title;
+    const modalHero = document.getElementById('modalHero');
+    const modalVideoContainer = document.getElementById('modalVideoContainer');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalTitleImage = document.getElementById('modalTitleImage');
+
+    // Handle title - use image if available, otherwise text
+    if (collection.titleImage) {
+        // Reset animation by removing and re-adding
+        modalTitleImage.style.animation = 'none';
+        modalTitleImage.offsetHeight; // Trigger reflow
+        modalTitleImage.style.animation = '';
+
+        modalTitleImage.src = collection.titleImage;
+        modalTitleImage.alt = collection.title;
+        modalTitleImage.style.display = 'block';
+        modalTitleImage.style.opacity = '1';
+        modalTitle.style.display = 'none';
+    } else {
+        modalTitleImage.style.display = 'none';
+        modalTitle.style.display = 'block';
+        modalTitle.textContent = collection.title;
+    }
+
     modalDescription.textContent = collection.description;
-    currentArtworks = collection.artworks;
+
+    // Set up background video if collection has one
+    if (collection.localVideo) {
+        modalVideoContainer.classList.remove('hidden');
+        modalHero.classList.remove('no-video');
+        modalVideo.querySelector('source').src = collection.localVideo;
+        modalVideo.load();
+        modalVideo.play();
+
+        // Reset sound button state
+        const soundBtn = document.getElementById('modalSoundBtn');
+        if (soundBtn) {
+            const soundOff = soundBtn.querySelector('.sound-off');
+            const soundOn = soundBtn.querySelector('.sound-on');
+            soundOff.style.display = 'inline';
+            soundOn.style.display = 'none';
+            modalVideo.muted = true;
+        }
+    } else {
+        modalVideoContainer.classList.add('hidden');
+        modalHero.classList.add('no-video');
+    }
 
     // Render catalog grid
     catalogGrid.innerHTML = '';
 
-    // If collection has a featured video, render a large video tile first
+    // If collection has a YouTube video, render a large video tile
     if (collection.video) {
         const videoItem = document.createElement('div');
         videoItem.className = 'catalog-video';
@@ -282,18 +378,36 @@ function openCollection(collectionId) {
         catalogGrid.appendChild(videoItem);
     }
 
-    collection.artworks.forEach((artwork, index) => {
-        const item = document.createElement('div');
-        item.className = 'catalog-item';
-        item.innerHTML = `
-            <img src="${artwork.image}" alt="${artwork.title}" loading="lazy">
-            <div class="catalog-item-overlay">
-                <h4>${artwork.title}</h4>
-                <p>${artwork.details}</p>
-            </div>
-        `;
-        item.addEventListener('click', () => openLightbox(index));
-        catalogGrid.appendChild(item);
+    // Filter out separators for lightbox navigation
+    const artworksOnly = collection.artworks.filter(a => a.type !== 'separator');
+    let artworkIndex = 0;
+
+    collection.artworks.forEach((artwork) => {
+        if (artwork.type === 'separator') {
+            // Render category separator
+            const separator = document.createElement('div');
+            separator.className = 'catalog-separator';
+            separator.innerHTML = `<h3>${artwork.title}</h3>`;
+            catalogGrid.appendChild(separator);
+        } else {
+            // Render artwork item
+            const item = document.createElement('div');
+            item.className = 'catalog-item';
+            item.innerHTML = `
+                <img src="${artwork.image}" alt="${artwork.title}" loading="lazy">
+                <div class="catalog-item-overlay">
+                    <h4>${artwork.title}</h4>
+                    <p>${artwork.details}</p>
+                </div>
+            `;
+            const currentIndex = artworkIndex;
+            item.addEventListener('click', () => {
+                currentArtworks = artworksOnly;
+                openLightbox(currentIndex);
+            });
+            catalogGrid.appendChild(item);
+            artworkIndex++;
+        }
     });
 
     collectionModal.classList.add('active');
@@ -303,6 +417,12 @@ function openCollection(collectionId) {
 function closeCollection() {
     collectionModal.classList.remove('active');
     document.body.style.overflow = '';
+
+    // Stop background video
+    const modalVideo = document.getElementById('modalVideo');
+    if (modalVideo) {
+        modalVideo.pause();
+    }
 }
 
 modalBack.addEventListener('click', closeCollection);

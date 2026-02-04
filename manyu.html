@@ -14,8 +14,8 @@
         <a href="index.html" class="back-link">← VASTART</a>
         <ul class="nav-links">
             <li><a href="#bio" class="nav-link">Bio</a></li>
-            <li><a href="#artworks" class="nav-link">Artworks</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#artworks" class="nav-link">Obras</a></li>
+            <li><a href="#contact" class="nav-link">Contacto</a></li>
         </ul>
         <div class="hamburger">
             <span></span>
@@ -28,7 +28,7 @@
     <section class="artist-hero">
         <div class="hero-video-container">
             <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
-                <source src="assets/humansuit/humansuit.mp4" type="video/mp4">
+                <source src="assets/manyu-hero.mp4" type="video/mp4">
             </video>
             <button class="video-sound-btn" id="videoSoundBtn" aria-label="Activar sonido">
                 <span class="sound-off">🔇</span>
@@ -38,7 +38,7 @@
         <div class="hero-overlay"></div>
         <div class="artist-hero-content">
             <h1 class="artist-name">Man Yu</h1>
-            <p class="artist-tagline">Interdisciplinary Artist</p>
+            <p class="artist-tagline">Artista Interdisciplinaria</p>
             <div class="scroll-indicator">
                 <span>Scroll</span>
                 <div class="scroll-line"></div>
@@ -67,7 +67,7 @@
                         <span class="stat-text">Obras</span>
                     </div>
                     <div class="bio-stat">
-                        <span class="stat-num">1995</span>
+                        <span class="stat-num">1987</span>
                         <span class="stat-text">Inicio</span>
                     </div>
                 </div>
@@ -77,160 +77,138 @@
 
     <!-- Artworks Collections -->
     <section class="artworks-section" id="artworks">
-        <h2 class="section-title">Original Artworks</h2>
+        <h2 class="section-title">Obras y Servicios</h2>
         
         <div class="collections-grid">
-            <!-- Collection 1: Human Suit -->
+            <!-- Collection 1: Arte en Vivo -->
+            <div class="collection-card" data-collection="live-art">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg" alt="Arte en Vivo" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>Arte en Vivo</h3>
+                    <span class="collection-count">1 obra</span>
+                </div>
+            </div>
+
+            <!-- Collection 2: VideoArte -->
+            <div class="collection-card" data-collection="videoart">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg" alt="VideoArte" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>VideoArte</h3>
+                    <span class="collection-count">1 obra</span>
+                </div>
+            </div>
+
+            <!-- Collection 3: Traje Humano -->
             <div class="collection-card" data-collection="human-suit">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg" alt="Human Suit" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_2fa9bae5d6b149fc982fe0c96f100b2d~mv2.jpg" alt="Traje Humano" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Human Suit</h3>
-                    <span class="collection-count">12 works</span>
+                    <h3>Traje Humano</h3>
+                    <span class="collection-count">28 obras</span>
                 </div>
             </div>
 
-            <!-- Collection 2: Futurism Series -->
-            <div class="collection-card" data-collection="futuristic-art">
+            <!-- Collection 4: No Soy Este Traje -->
+            <div class="collection-card" data-collection="not-this-suit">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg" alt="Futurism Series" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg" alt="No Soy Este Traje" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Futurism Series</h3>
-                    <span class="collection-count">4 works</span>
+                    <h3>No Soy Este Traje</h3>
+                    <span class="collection-count">1 obra</span>
                 </div>
             </div>
 
-            <!-- Collection 3: Women from the East -->
+            <!-- Collection 5: El Armario Humano -->
+            <div class="collection-card" data-collection="human-closet">
+                <div class="collection-media">
+                    <img src="https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg" alt="El Armario Humano" class="collection-fallback">
+                </div>
+                <div class="collection-overlay">
+                    <h3>El Armario Humano</h3>
+                    <span class="collection-count">1 obra</span>
+                </div>
+            </div>
+
+            <!-- Collection 6: Mujeres Del Este -->
             <div class="collection-card" data-collection="women-east">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg" alt="Women from the East" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_380f668090b546149d8a679c72ec8096~mv2.jpg" alt="Mujeres Del Este" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Women from the East</h3>
-                    <span class="collection-count">5 works</span>
+                    <h3>Mujeres Del Este</h3>
+                    <span class="collection-count">5 obras</span>
                 </div>
             </div>
 
-            <!-- Collection 4: Other Works -->
-            <div class="collection-card" data-collection="other-works">
+            <!-- Collection 7: Colección Privada -->
+            <div class="collection-card" data-collection="private-collection">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_39370e7a0a6b41f8b2d0cf038939590a~mv2.jpg" alt="Other Works" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg" alt="Colección Privada" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Other Works</h3>
-                    <span class="collection-count">12 works</span>
+                    <h3>Colección Privada</h3>
+                    <span class="collection-count">1 obra</span>
                 </div>
             </div>
 
-            <!-- Collection 5: Figurative Works -->
-            <div class="collection-card" data-collection="figurative">
+            <!-- Collection 8: Proyecto Mujer -->
+            <div class="collection-card" data-collection="project-woman">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_4385c3737e2d4e918870c6a5c113e69df000.jpg" alt="Figurative Works" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg" alt="Proyecto Mujer" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Figurative Works and Portraits</h3>
-                    <span class="collection-count">1 work</span>
+                    <h3>Proyecto Mujer</h3>
+                    <span class="collection-count">1 obra</span>
                 </div>
             </div>
 
-            <!-- Collection 6: Trajines -->
+            <!-- Collection 9: Trajines -->
             <div class="collection-card" data-collection="trajines">
                 <div class="collection-media">
                     <img src="https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg" alt="Trajines" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
                     <h3>Trajines</h3>
-                    <span class="collection-count">1 work</span>
+                    <span class="collection-count">1 obra</span>
                 </div>
             </div>
 
-            <!-- Collection 7: Project Woman -->
-            <div class="collection-card" data-collection="project-woman">
+            <!-- Collection 10: Obras Figurativas y Retratos -->
+            <div class="collection-card" data-collection="figurative">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_aa6e958ce7f44ce5854ddfa2ada13808f000.jpg" alt="Project Woman" class="collection-fallback">
+                    <img src="assets/figurativeandportraits/pastel chalk/El director. 2015. Tiza pastel. 61x46,5.jpg" alt="Obras Figurativas y Retratos" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Project Woman</h3>
-                    <span class="collection-count">1 work</span>
+                    <h3>Obras Figurativas y Retratos</h3>
+                    <span class="collection-count">46 obras</span>
                 </div>
             </div>
 
-            <!-- Collection 8: Videoart -->
-            <div class="collection-card" data-collection="videoart">
+            <!-- Collection 11: Serie Futurista -->
+            <div class="collection-card" data-collection="futuristic-art">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg" alt="Videoart" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_17341e569862434c92524699c9669832~mv2.jpg" alt="Serie Futurista" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Videoart</h3>
-                    <span class="collection-count">1 work</span>
+                    <h3>Serie Futurista</h3>
+                    <span class="collection-count">4 obras</span>
                 </div>
             </div>
 
-            <!-- Collection 9: I'm not this Suit -->
-            <div class="collection-card" data-collection="not-this-suit">
-                <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_3fc1cf95651c427d91df97be5d81a6b0f000.jpg" alt="I'm not this Suit" class="collection-fallback">
-                </div>
-                <div class="collection-overlay">
-                    <h3>I'm not this Suit</h3>
-                    <span class="collection-count">1 work</span>
-                </div>
-            </div>
-
-            <!-- Collection 10: Love in times of COVID -->
-            <div class="collection-card" data-collection="love-covid">
-                <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_12d2e8d8ea7c48b0b461b38c6512fb7cf000.jpg" alt="Love in times of COVID" class="collection-fallback">
-                </div>
-                <div class="collection-overlay">
-                    <h3>Love in times of COVID</h3>
-                    <span class="collection-count">1 work</span>
-                </div>
-            </div>
-
-            <!-- Collection 11: Comic: All for Love -->
+            <!-- Collection 12: Comic: Todo por Amor -->
             <div class="collection-card" data-collection="all-for-love">
                 <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg" alt="All for Love" class="collection-fallback">
+                    <img src="https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg" alt="Comic: Todo por Amor" class="collection-fallback">
                 </div>
                 <div class="collection-overlay">
-                    <h3>Comic: All for Love</h3>
-                    <span class="collection-count">1 work</span>
-                </div>
-            </div>
-
-            <!-- Collection 12: Private Collection -->
-            <div class="collection-card" data-collection="private-collection">
-                <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_267b5fe76d63400f88c77bd276b6e9ebf000.jpg" alt="Private Collection" class="collection-fallback">
-                </div>
-                <div class="collection-overlay">
-                    <h3>Private Collection Series</h3>
-                    <span class="collection-count">1 work</span>
-                </div>
-            </div>
-
-            <!-- Collection 13: Live Art -->
-            <div class="collection-card" data-collection="live-art">
-                <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg" alt="Live Art" class="collection-fallback">
-                </div>
-                <div class="collection-overlay">
-                    <h3>Live Art</h3>
-                    <span class="collection-count">1 work</span>
-                </div>
-            </div>
-
-            <!-- Collection 14: The Human Closet -->
-            <div class="collection-card" data-collection="human-closet">
-                <div class="collection-media">
-                    <img src="https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg" alt="The Human Closet" class="collection-fallback">
-                </div>
-                <div class="collection-overlay">
-                    <h3>The Human Closet</h3>
-                    <span class="collection-count">1 work</span>
+                    <h3>Comic: Todo por Amor</h3>
+                    <span class="collection-count">1 obra</span>
                 </div>
             </div>
         </div>
@@ -239,17 +217,31 @@
     <!-- Collection Detail Modal -->
     <div class="collection-modal" id="collectionModal">
         <div class="modal-header">
-            <button class="modal-back" id="modalBack">← Back to Collections</button>
+            <button class="modal-back" id="modalBack">← Volver a Colecciones</button>
             <button class="modal-close" id="modalClose">&times;</button>
         </div>
         <div class="modal-content">
-            <div class="modal-hero">
-                <h2 class="modal-title" id="modalTitle">Human Suit</h2>
+            <div class="modal-hero" id="modalHero">
+                <div class="modal-video-container" id="modalVideoContainer">
+                    <video autoplay muted loop playsinline class="modal-video" id="modalVideo">
+                        <source src="" type="video/mp4">
+                    </video>
+                    <button class="modal-sound-btn" id="modalSoundBtn" aria-label="Activar sonido">
+                        <span class="sound-off">🔇</span>
+                        <span class="sound-on" style="display:none;">🔊</span>
+                    </button>
+                </div>
+                <div class="modal-hero-content">
+                    <img class="modal-title-image" id="modalTitleImage" src="" alt="" style="display:none;">
+                    <h2 class="modal-title" id="modalTitle">Traje Humano</h2>
+                </div>
+            </div>
+            <div class="modal-description-container">
                 <p class="modal-description" id="modalDescription">
                     The first work in the collection was made in 1987. Man Yu, immersed in this premature reflection, first materialized this dense and abstract concept when she was only 9 years old.
                 </p>
             </div>
-            <h3 class="catalog-title">Catalog</h3>
+            <h3 class="catalog-title">Catálogo</h3>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Artworks will be loaded dynamically -->
             </div>
