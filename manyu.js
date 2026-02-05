@@ -130,10 +130,14 @@ const collectionsData = {
     },
     'trajines': {
         title: 'Trajines',
-        description: 'Una serie que explora el movimiento, la vida cotidiana y el ritmo de la existencia humana. Estas obras capturan la esencia de las actividades diarias transformadas en expresión artística.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg',
+        description: 'En Trajines, presenté una instalación que refleja las experiencias internas y externas que viví debido al acoso escolar que sufrí por «llevar» un traje humano diferente al de los demás: llevaba un traje de niña asiática en la Escuela Católica Activa, en San José, en 1987. Se trata de una pieza textil, amarillenta —como el color de la piel asiática—, semitransparente —como representación de una capa—, con una longitud de 9 metros y con costuras rojas sueltas —en reflejo de un sinfín de posibilidades—.',
+        coverImage: 'assets/Trajines/Trajines.png',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_1d36fbcb94544eaa82d178a3474b69e8f000.jpg', title: 'Trajines I', details: 'Contact for availability' },
+            { image: 'assets/Trajines/Trajines.png', title: 'Trajines - Instalación', details: 'Pieza textil de 9 metros' },
+            { image: 'assets/Trajines/Trajines2.jpg', title: 'Trajines - Detalle', details: 'Instalación interactiva' },
+            { image: 'assets/Trajines/Trajines3.jpg', title: 'Trajines - Vista', details: 'Instalación interactiva' },
+            { image: 'assets/Trajines/Trajines4.jpg', title: 'Trajines - Participación', details: 'Instalación interactiva' },
+            { image: 'assets/Trajines/Trajines5.jpg', title: 'Trajines - Intervención', details: 'Instalación interactiva' }
         ]
     },
     'project-woman': {
@@ -148,9 +152,12 @@ const collectionsData = {
         title: 'VideoArte',
         description: 'Imágenes en movimiento que exploran el tiempo, el espacio y la emoción. Estas obras de video combinan arte visual con diseño de sonido para crear experiencias inmersivas que desafían la percepción.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg',
-        localVideo: 'assets/videoarts.mp4',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_aa02ef98eaf44d28bf38aba33681cd5af000.jpg', title: 'VideoArte I', details: 'Instalación de video' },
+            { type: 'video', video: 'assets/VideoArte/Videoarte Traje Humano/Videoarte  Traje Humano - Man Yu..mp4', title: 'Traje Humano', details: 'VideoArte' },
+            { type: 'video', video: 'assets/VideoArte/Videoarte Cambio de Traje/videoarte cambio de Traje - Man Yu..mp4', title: 'Cambio de Traje', details: 'VideoArte' },
+            { type: 'video', video: 'assets/VideoArte/Videoarte La Mujer más bella/Videoarte  La mujer más bella - Man Yu..mp4', title: 'La Mujer más bella', details: 'VideoArte' },
+            { type: 'video', video: 'assets/VideoArte/Videoarte Ilusión Costrucción Sonora/Videoarte  Ilusión Construcción Sonora - Man Yu.mp4', title: 'Ilusión - Construcción Sonora', details: 'VideoArte' },
+            { type: 'video', video: 'assets/VideoArte/Videoarte #reflexión54díasdeconfinamientocovid19/Videoarte  #reflexión54diasdeconfinamientocovid19 - Man Yu..mp4', title: '#reflexión54días - Amor en Tiempos de COVID', details: 'VideoArte - 54 días de confinamiento' }
         ]
     },
     'not-this-suit': {
@@ -180,18 +187,145 @@ const collectionsData = {
     'live-art': {
         title: 'Arte en Vivo',
         description: 'Sesiones de performance y pintura en vivo capturadas en fotografías y video. Estas obras representan la naturaleza efímera de la creación y la conexión íntima entre el artista y el público.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg',
-        localVideo: 'assets/live-art.mp4',
+        coverImage: 'assets/Liveart/Chavela Vargas Live Portrait/Chavela final.jpg',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_c0b2e7b211c04994b76247fd8c9baeb0f000.jpg', title: 'Arte en Vivo I', details: 'Documentación de performance' },
+            // === 2018 Chinese New Year Festival ===
+            { type: 'separator', title: '2018 Chinese New Year Festival' },
+            { type: 'video', video: 'assets/Liveart/2018 Chinese New Year Festival/Cruda a pera liveart.mp4', title: 'Cruda a Pera - Live Art', details: '2018 Chinese New Year Festival' },
+            { image: 'assets/Liveart/2018 Chinese New Year Festival/Cruda a pera boceto 1.jpg', title: 'Cruda a Pera - Boceto 1', details: '2018 Chinese New Year Festival' },
+            { image: 'assets/Liveart/2018 Chinese New Year Festival/Cruda a pera boceto 2.jpg', title: 'Cruda a Pera - Boceto 2', details: '2018 Chinese New Year Festival' },
+            { image: 'assets/Liveart/2018 Chinese New Year Festival/Cruda a pera boceto 3.jpg', title: 'Cruda a Pera - Boceto 3', details: '2018 Chinese New Year Festival' },
+            // === 2023 Chinese New Year Festival ===
+            { type: 'separator', title: '2023 Chinese New Year Festival' },
+            { type: 'video', video: 'assets/Liveart/2023 Chinese New Year Festival/Conejo del Amor liveart.mp4', title: 'Conejo del Amor - Live Art', details: '2023 Chinese New Year Festival' },
+            { image: 'assets/Liveart/2023 Chinese New Year Festival/Conejo del amor final.jpg', title: 'Conejo del Amor - Obra Final', details: '2023 Chinese New Year Festival' },
+            // === Chavela Vargas Live Portrait ===
+            { type: 'separator', title: 'Chavela Vargas Live Portrait' },
+            { type: 'video', video: 'assets/Liveart/Chavela Vargas Live Portrait/Chavela liveart.mp4', title: 'Chavela Vargas - Live Art', details: 'Live Portrait' },
+            { image: 'assets/Liveart/Chavela Vargas Live Portrait/Chavela final.jpg', title: 'Chavela Vargas - Obra Final', details: 'Live Portrait' },
+            // === Live Art and Performance "Hero" ===
+            { type: 'separator', title: 'Live Art and Performance "Hero"' },
+            { type: 'video', video: 'assets/Liveart/Live Art and Performance "Hero"/Live art hero.mp4', title: 'Hero - Live Art', details: 'Performance' },
+            { image: 'assets/Liveart/Live Art and Performance "Hero"/Hero final.jpg', title: 'Hero - Obra Final', details: 'Performance' },
+            // === Live Art Leonardo Gell & Man Yu ===
+            { type: 'separator', title: 'Live Art Leonardo Gell & Man Yu' },
+            { type: 'video', video: 'assets/Liveart/Live Art Leonardo Gell & Man Yu/Leonardo Gell Man Yu SonoRetratos.mp4', title: 'Leonardo Gell & Man Yu - SonoRetratos', details: 'Live Art Collaboration' },
+            { image: 'assets/Liveart/Live Art Leonardo Gell & Man Yu/Leonardo Gell final.jpg', title: 'Leonardo Gell - Obra Final', details: 'Live Art Collaboration' }
         ]
     },
     'human-closet': {
-        title: 'El Armario Humano',
-        description: 'Una serie introspectiva que explora las máscaras que usamos y las personas que creamos. Cada pieza profundiza en la complejidad de la identidad humana y la brecha entre la percepción pública y la realidad privada.',
-        coverImage: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg',
+        title: 'El Closet Humano',
+        description: 'Como parte de la exploración multidisciplinar y el trabajo colaborativo entre artistas de diferentes oficios, 11 diseñadores de moda de la Universidad Creativa (Laura Vargas Tuk, Pamela Vargas, Joselyn Lam, Kendry Guido, Maureen Berrocal, Tatiana Marín, Yorleny Artavia, Jimena Sanz, Gimena Ramírez, Cristi Blanco y Sheyla Palma), bajo la dirección de Rob Chamaeleo y el punto de partida de Man Yu, crearon 40 piezas de ropa para reforzar el mensaje del Traje Humano.',
+        coverImage: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (1).jpg',
+        localVideo: 'assets/El closet humano/El closet humano.mp4',
         artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_dc7faca40c844a6582faaeab21a3a66ff000.jpg', title: 'The Human Closet I', details: 'Contact for availability' },
+            // === Cristi Blanco ===
+            { type: 'separator', title: 'Cristi Blanco' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (4).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (14).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (16).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (17).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (24).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (26).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (35).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Cristi Blanco/Cristi Blanco (36).jpg', title: 'Cristi Blanco', details: 'Diseño de moda - Universidad Creativa' },
+            // === Gimena Ramírez ===
+            { type: 'separator', title: 'Gimena Ramírez' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (1).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (2).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (4).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (6).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (8).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (10).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (13).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Gimena Ramirez/Gimena Ramírez (16).jpg', title: 'Gimena Ramírez', details: 'Diseño de moda - Universidad Creativa' },
+            // === Yorleny Artavia ===
+            { type: 'separator', title: 'Yorleny Artavia' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (1).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (2).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (3).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (4).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (5).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (6).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (7).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (8).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (9).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (10).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Jorleny Artavia/Yorleny Artavia (11).jpg', title: 'Yorleny Artavia', details: 'Diseño de moda - Universidad Creativa' },
+            // === Joselyn Lam ===
+            { type: 'separator', title: 'Joselyn Lam' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (1).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (2).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (3).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (4).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (5).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (6).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (7).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (8).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (10).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (11).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (12).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (13).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (14).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (15).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Joselyn Lam/Joselyn Lam (16).jpg', title: 'Joselyn Lam', details: 'Diseño de moda - Universidad Creativa' },
+            // === Kendry Guido ===
+            { type: 'separator', title: 'Kendry Guido' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (3).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (4).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (16).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (22).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (27).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (33).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (36).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Kendry Guido/Kendry Guido (40).jpg', title: 'Kendry Guido', details: 'Diseño de moda - Universidad Creativa' },
+            // === Laura Vargas Tuk ===
+            { type: 'separator', title: 'Laura Vargas Tuk' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (1).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (2).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (3).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (4).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (5).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (6).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (7).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/LaTuk/LaTuk (8).JPG.jpg', title: 'Laura Vargas Tuk', details: 'Diseño de moda - Universidad Creativa' },
+            // === Maureen Berrocal ===
+            { type: 'separator', title: 'Maureen Berrocal' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (1).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (3).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (4).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (5).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (6).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Maureen Berrocal/Maureen Berrocal (11).jpg', title: 'Maureen Berrocal', details: 'Diseño de moda - Universidad Creativa' },
+            // === Pamela Vargas ===
+            { type: 'separator', title: 'Pamela Vargas' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (1).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (2).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (3).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (4).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (5).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (6).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Pamela Vargas/Pamela Vargas (7).jpg', title: 'Pamela Vargas', details: 'Diseño de moda - Universidad Creativa' },
+            // === Sheyla Palma ===
+            { type: 'separator', title: 'Sheyla Palma' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (4).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (10).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (18).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (19).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (21).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (30).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (31).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Sheyla Palma/Sheyla Palma (34).jpg', title: 'Sheyla Palma', details: 'Diseño de moda - Universidad Creativa' },
+            // === Tatiana Marín ===
+            { type: 'separator', title: 'Tatiana Marín' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (1).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (2).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (3).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (4).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (5).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (6).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (7).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' },
+            { image: 'assets/El closet humano/Tatiana Marín/Tatiana Marín (8).jpg', title: 'Tatiana Marín', details: 'Diseño de moda - Universidad Creativa' }
         ]
     }
 };
@@ -395,6 +529,35 @@ function openCollection(collectionId) {
             separator.className = 'catalog-separator';
             separator.innerHTML = `<h3>${artwork.title}</h3>`;
             catalogGrid.appendChild(separator);
+        } else if (artwork.type === 'video') {
+            // Render video artwork item
+            const item = document.createElement('div');
+            item.className = 'catalog-item catalog-item-video';
+            item.innerHTML = `
+                <video src="${artwork.video}" muted loop preload="metadata"></video>
+                <button class="catalog-video-play" aria-label="Reproducir video"></button>
+                <div class="catalog-item-overlay">
+                    <h4>${artwork.title}</h4>
+                    <p>${artwork.details}</p>
+                </div>
+            `;
+            const video = item.querySelector('video');
+
+            // Play preview on hover
+            item.addEventListener('mouseenter', () => {
+                video.play().catch(() => {});
+            });
+            item.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Open video in lightbox on click
+            item.addEventListener('click', () => {
+                openVideoLightbox(artwork.video, artwork.title, artwork.details);
+            });
+
+            catalogGrid.appendChild(item);
         } else {
             // Render artwork item
             const item = document.createElement('div');
@@ -476,8 +639,39 @@ function closeLightbox() {
     // remove video iframe if present to stop playback
     const iframe = document.getElementById('lightboxIframe');
     if (iframe) iframe.remove();
+    // remove local video if present
+    const localVideo = document.getElementById('lightboxLocalVideo');
+    if (localVideo) localVideo.remove();
     // restore image element
     lightboxImage.style.display = 'block';
+}
+
+// Open a local video file in the lightbox
+function openVideoLightbox(videoSrc, title, details = '') {
+    // remove any existing video elements
+    const existingIframe = document.getElementById('lightboxIframe');
+    if (existingIframe) existingIframe.remove();
+    const existingVideo = document.getElementById('lightboxLocalVideo');
+    if (existingVideo) existingVideo.remove();
+
+    // hide the image element
+    lightboxImage.style.display = 'none';
+
+    const video = document.createElement('video');
+    video.id = 'lightboxLocalVideo';
+    video.src = videoSrc;
+    video.controls = true;
+    video.autoplay = true;
+    video.style.maxWidth = '100%';
+    video.style.maxHeight = '70vh';
+
+    const container = document.querySelector('.lightbox-content');
+    container.prepend(video);
+
+    lightboxTitle.textContent = title;
+    lightboxDetails.textContent = details;
+
+    lightbox.classList.add('active');
 }
 
 function updateLightbox() {
