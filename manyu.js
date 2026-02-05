@@ -165,9 +165,9 @@ const collectionsData = {
         title: 'Comic: Todo por Amor',
         description: 'Un viaje narrativo contado a través del arte del cómic, explorando las profundidades y dimensiones del amor en todas sus formas. Esta serie combina la narración con el arte visual.',
         coverImage: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg',
-        artworks: [
-            { image: 'https://static.wixstatic.com/media/d78eda_6c757ace036a4f8f88398ebdc94da8d3f000.jpg', title: 'All for Love I', details: 'Contact for availability' },
-        ]
+        isComic: true,
+        comicPdf: 'assets/comic all for love/Todo por amor, en Coordenadas Gráficas.pdf',
+        artworks: []
     },
     'private-collection': {
         title: 'Colección Privada',
@@ -318,6 +318,12 @@ if (modalSoundBtn) {
 function openCollection(collectionId) {
     const collection = collectionsData[collectionId];
     if (!collection) return;
+
+    // If it's a comic, open the comic reader instead
+    if (collection.isComic && collection.comicPdf) {
+        openComicReader(collection.comicPdf);
+        return;
+    }
 
     const modalHero = document.getElementById('modalHero');
     const modalVideoContainer = document.getElementById('modalVideoContainer');
@@ -730,8 +736,144 @@ document.addEventListener('DOMContentLoaded', () => {
         if (collection) {
             const countEl = card.querySelector('.collection-count');
             if (countEl) {
-                countEl.textContent = `${collection.artworks.length} works`;
+                if (collection.isComic) {
+                    countEl.textContent = 'Leer cómic';
+                } else {
+                    countEl.textContent = `${collection.artworks.length} works`;
+                }
             }
         }
     });
+});
+
+// ============================================
+// Comic Reader
+// ============================================
+
+const comicReader = document.getElementById('comicReader');
+const comicCanvas = document.getElementById('comicCanvas');
+const comicClose = document.getElementById('comicClose');
+const comicPrev = document.getElementById('comicPrev');
+const comicNext = document.getElementById('comicNext');
+const comicCurrentPage = document.getElementById('comicCurrentPage');
+const comicTotalPages = document.getElementById('comicTotalPages');
+const comicZoomIn = document.getElementById('comicZoomIn');
+const comicZoomOut = document.getElementById('comicZoomOut');
+const comicZoomLevel = document.getElementById('comicZoomLevel');
+
+let pdfDoc = null;
+let currentPage = 1;
+let totalPages = 0;
+let scale = 1.5;
+let rendering = false;
+
+// Set PDF.js worker
+if (typeof pdfjsLib !== 'undefined') {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+async function openComicReader(pdfUrl) {
+    if (typeof pdfjsLib === 'undefined') {
+        alert('Error: PDF.js no se cargó correctamente');
+        return;
+    }
+
+    comicReader.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    try {
+        pdfDoc = await pdfjsLib.getDocument(pdfUrl).promise;
+        totalPages = pdfDoc.numPages;
+        currentPage = 1;
+        comicTotalPages.textContent = totalPages;
+        renderPage(currentPage);
+        updateNavButtons();
+    } catch (error) {
+        console.error('Error loading PDF:', error);
+        alert('Error al cargar el cómic. Por favor intenta de nuevo.');
+        closeComicReader();
+    }
+}
+
+async function renderPage(pageNum) {
+    if (rendering) return;
+    rendering = true;
+
+    try {
+        const page = await pdfDoc.getPage(pageNum);
+        const viewport = page.getViewport({ scale: scale });
+
+        comicCanvas.width = viewport.width;
+        comicCanvas.height = viewport.height;
+
+        const ctx = comicCanvas.getContext('2d');
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+
+        await page.render(renderContext).promise;
+        comicCurrentPage.textContent = pageNum;
+    } catch (error) {
+        console.error('Error rendering page:', error);
+    }
+
+    rendering = false;
+}
+
+function updateNavButtons() {
+    comicPrev.disabled = currentPage <= 1;
+    comicNext.disabled = currentPage >= totalPages;
+}
+
+function closeComicReader() {
+    comicReader.classList.remove('active');
+    document.body.style.overflow = '';
+    pdfDoc = null;
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderPage(currentPage);
+        updateNavButtons();
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderPage(currentPage);
+        updateNavButtons();
+    }
+}
+
+function zoomIn() {
+    scale = Math.min(scale + 0.25, 3);
+    comicZoomLevel.textContent = Math.round(scale * 100 / 1.5) + '%';
+    renderPage(currentPage);
+}
+
+function zoomOut() {
+    scale = Math.max(scale - 0.25, 0.5);
+    comicZoomLevel.textContent = Math.round(scale * 100 / 1.5) + '%';
+    renderPage(currentPage);
+}
+
+// Comic reader event listeners
+if (comicClose) comicClose.addEventListener('click', closeComicReader);
+if (comicPrev) comicPrev.addEventListener('click', prevPage);
+if (comicNext) comicNext.addEventListener('click', nextPage);
+if (comicZoomIn) comicZoomIn.addEventListener('click', zoomIn);
+if (comicZoomOut) comicZoomOut.addEventListener('click', zoomOut);
+
+// Keyboard navigation for comic reader
+document.addEventListener('keydown', (e) => {
+    if (comicReader.classList.contains('active')) {
+        if (e.key === 'Escape') closeComicReader();
+        if (e.key === 'ArrowRight') nextPage();
+        if (e.key === 'ArrowLeft') prevPage();
+        if (e.key === '+' || e.key === '=') zoomIn();
+        if (e.key === '-') zoomOut();
+    }
 });

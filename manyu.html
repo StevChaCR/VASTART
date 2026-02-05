@@ -273,6 +273,29 @@
         </div>
     </div>
 
+    <!-- Comic Reader Modal -->
+    <div class="comic-reader" id="comicReader">
+        <div class="comic-header">
+            <h2 class="comic-title">Todo por Amor</h2>
+            <button class="comic-close" id="comicClose">&times;</button>
+        </div>
+        <div class="comic-container">
+            <button class="comic-nav comic-prev" id="comicPrev">&#10094;</button>
+            <div class="comic-page-wrapper">
+                <canvas id="comicCanvas"></canvas>
+            </div>
+            <button class="comic-nav comic-next" id="comicNext">&#10095;</button>
+        </div>
+        <div class="comic-controls">
+            <span class="comic-page-info">Página <span id="comicCurrentPage">1</span> de <span id="comicTotalPages">1</span></span>
+            <div class="comic-zoom-controls">
+                <button id="comicZoomOut">−</button>
+                <span id="comicZoomLevel">100%</span>
+                <button id="comicZoomIn">+</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section class="artist-contact" id="contact">
         <div class="contact-content">
@@ -316,6 +339,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="manyu.js"></script>
 </body>
 </html>
